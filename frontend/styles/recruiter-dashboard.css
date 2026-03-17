@@ -57,6 +57,32 @@ body{
     font-size: 15px;
 }
 
+.job-search-suggestions {
+    list-style: none;       
+    margin: 0;             
+    padding: 5px;             
+    position: absolute;     
+    width: 100%;            
+    background-color: #fff; 
+    border: 1px solid #ddd; 
+    border-top: none;       
+    max-height: 200px;   
+    overflow-y: auto;       
+    z-index: 100; 
+    display: none;          
+}
+
+/
+.job-search-suggestions li {
+    padding: 10px;          
+    cursor: pointer;        
+}
+
+
+.job-search-suggestions li:hover {
+    background-color: #f2f2f2; 
+}
+
 .header-icons{
     display: flex;
     height: 48px;
@@ -408,6 +434,12 @@ body{
     padding: 5px;
     border-radius: 5px;
     font-weight: 800px;
+}
+
+.td-link{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
 }
 
 .active-job-container{

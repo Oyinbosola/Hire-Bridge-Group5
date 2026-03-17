@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/candidate-dashboard.css">
+    
 </head>
 <body>
     <header class="header-container">
@@ -19,11 +20,24 @@
         <nav class="input-container">
             <i class="ph-bold ph-magnifying-glass"></i>
             <input type="text" placeholder="Search Job by title, skill or location">
+            <ul class="job-search-suggestions">
+                <li>UX Designer</li>
+                <li>UI Designer</li>
+                <li>Product Designer</li>
+                <li>Frontend Developer</li>
+                <li>Backend Developer</li>
+             </ul>
         </nav>
 
         <div class="header-icons">
-            <i class="ph-bold ph-envelope-simple"></i>
-            <i class="ph-bold ph-bell"></i>
+            <div class="message-icon-container">
+                <i class="ph-bold ph-envelope-simple"></i>
+                 <span class="message-count">3</span>
+            </div>
+            <div>
+                <i class="ph-bold ph-bell"></i>
+                <span class="message-count">3</span>
+            </div>
             <img src="../../assets/images/Ellipse 4.svg" alt="">
         </div>
     </header>
@@ -79,13 +93,14 @@
             </div>
 
             <div class="profile">
-                <div>
-                    <img src="../../assets/images/Ellipse 4.svg" alt="">
+                 <div>
+                    <img id="user-avatar" src="../../assets/images/Ellipse 4.svg" alt="Profile-picture">
                 </div>
-                <h5>Chukwu Emeka</h>
-                <p>PRODUCT DESIGNER</p>
+                 <div class="profile-info">
+                     <h5>Chukwu Emeka</h5>
+                    <p>PRODUCT DESIGNER</p>
+                </div>
             </div>
-        </div>
     </section>
 
     <section>
@@ -111,8 +126,8 @@
                     <h3>Complete your profile to improve your match score</h3>
                     <div class="progress-bar">
                         <div class="progress-fill"></div>
-                    </div>
-                    <p>65% complete. Add work experience and upload your CV to reach 100%</p>
+                    </div >
+                    <p class="progress-text">65% complete. Add work experience and upload your CV to reach 100%</p>
                 </div>
                     <button class="complete-profile-btn">Complete Profile</button>
             </div>
@@ -120,20 +135,245 @@
              <div class="stat-row">
                 <div class="stat-card">
                     <h6>APPLICATIONS SENT</h6>
-                    <h4>6</h4>
-                    <P>Across 3 job roles</P>
+                    <h4 class="stat-number" data-type="applications">6</h4>
+                    <P  class="stat-text" data-type="applications">Across 3 job roles</P>
                 </div>
 
                 <div class="stat-card">
                     <h6>SHORTLISTED</h6>
-                    <h4>2</h4>
-                    <P>Awaiting next step</P>
+                    <h4 class="stat-number" data-type="shortlisted">2</h4>
+                    <P  class="stat-text" data-type="shortlisted">Awaiting next step</P>
                 </div>
 
                  <div class="stat-card">
                     <h6>INTERVIEWS SCHEDULED</h6>
-                    <h4>1</h4>
-                    <P>Coming Up Mar 6</P>
+                    <h4 class="stat-number" data-type="interviews">1</h4>
+                    <P  class="stat-text" data-type="interviews">Coming Up Mar 6</P>
                 </div>
             </div>
+
+        <div class="dashboard-grid">
+
+            <div class="my-applications">
+                <div class="section-header">
+                    <h3>My Applications</h3>
+                    <a href="">View All →</a>
+                </div>
+                <div class="application-one">
+                    <div class="my-applications-logo">
+                        <i class="ph ph-figma-logo"></i>
+                    </div>
+                    <div class="application-one-details">
+                        <h4>UX Designer - TechCorp NG</h4>
+                        <p>Lagos, Nigeria - Full-time</p>
+                        <div class="pipeline-steps">
+                            <div class="step active"></div>
+                            <div class="step active"></div>
+                            <div class="step active"></div>
+                            <div class="step"></div>
+                            <div class="step"></div>
+                        </div>
+                    </div>
+
+                    <div class="application-one-schedule">
+                        <p>Mar 2, 2026</p>
+                        <button>Interview Sheduled</button>
+                    </div>
+                </div>
+
+                <div class="application-one">
+                    <div class="my-applications-logo">
+                        <i class="ph ph-figma-logo"></i>
+                    </div>
+                    <div class="application-two-details">
+                        <h4>UX/UI Lead - Flutterwave</h4>
+                        <p>Lagos, Nigeria - Full-time</p>
+                        <div class="pipeline-steps">
+                            <div class="step active"></div>
+                            <div class="step"></div>
+                            <div class="step"></div>
+                            <div class="step"></div>
+                            <div class="step"></div>
+                        </div>
+                    </div>
+
+                    <div class="application-two-schedule">
+                        <p>Mar 1, 2026</p>
+                        <button>Applied</button>
+                    </div>
+                </div>
+
+                <div class="application-one">
+                    <div class="my-applications-logo">
+                        <i class="ph ph-figma-logo"></i>
+                    </div>
+                    <div class="application-three-details">
+                        <h4>UX Designer - Konga</h4>
+                        <p>Remote - Contract</p>
+                        <div class="pipeline-steps">
+                            <div class="step active"></div>
+                            <div class="step active"></div>
+                            <div class="step "></div>
+                            <div class="step"></div>
+                            <div class="step"></div>
+                        </div>
+                    </div>
+
+                    <div class="application-three-schedule">
+                        <p>Mar 4, 2026</p>
+                        <button>Shortlisted</button>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="upcoming-interviews">
+                <div class="section-header">
+                    <h3>Upcoming Interviews</h3>
+                    <a href="">View All →</a>
+                </div>
+                <div class="upcoming-interview-one">
+                    <div class="upcoming-interview-one-date">
+                        <h4>09</h4>
+                        <p>March</p>
+                    </div>
+
+                     <div class="interview-card">
+                        <h6>TechCorp - Ng</h6>
+                        <p>UX / UI Designer Roal</p>
+                        <p>10:00 - 11:00 AM</p>
+                        <div class="interview-actions">
+                            <button class="accept-accept">Accept</button>
+                            <button class="reject-reject">Reject</button>
+                            <p>Virtual</p>
+                        </div>
+                         
+                    </div>
+                </div>
+                
+                <div class="upcoming-interview-one">
+                    <div class="upcoming-interview-one-date">
+                        <h4>12</h4>
+                        <p>March</p>
+                    </div>
+
+                     <div class="interview-card">
+                        <h6>Konga</h6>
+                        <p>UX / UI Lead </p>
+                        <p>10:00 - 11:00 AM</p>
+                        <div class="interview-actions">
+                            <button class="accept-accept">Accept</button>
+                            <button class="reject-reject">Reject</button>
+                            <p>Virtual</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommended-jobs">
+                <div class="section-header">
+                    <h3>Recommended Jobs</h3>
+                    <a href="">Manage →</a>
+                </div>
+
+                <div class="recomended-jobs-info">
+                    <div class="recomended-jobs-icon">
+                        <i class="ph ph-figma-logo"></i>
+                    </div>
+                    <div class="recomended-one-info">
+                        <h4>Senior UX Designer - Andela</h4>
+                        <p>Remote - Full-time . 4+ yrs</p>
+                        <button>Figma</button>
+                        <button>UX Research</button>
+                        <button>Prototyping</button>
+                    </div>
+
+                    <div class="recomended-jobs-btn">
+                        <button class="accept-accep">Apply</button>
+                        <button class="reject-rejec">Save</button>
+                    </div>
+                </div>
+
+                <div class="recomended-jobs-info">
+                    <div class="recomended-jobs-icon">
+                        <i class="ph ph-figma-logo"></i>
+                    </div>
+                    <div class="recomended-one-info">
+                        <h4>Product Designer - Interswitch</h4>
+                        <p>Lagos. Full-time. 3+ yrs</p>
+                        <button>Figma</button>
+                        <button>UX Research</button>
+                        <button>Prototyping</button>
+                    </div>
+
+                    <div class="recomended-jobs-btn">
+                        <button class="accept-accep">Apply</button>
+                        <button class="reject-rejec">Save</button>
+                    </div>
+                </div>
+
+                <div class="recomended-jobs-info">
+                    <div class="recomended-jobs-icon">
+                        <i class="ph ph-figma-logo"></i>
+                    </div>
+                    <div class="recomended-two-info">
+                        <h4>UX Lead - Cowrywise</h4>
+                        <p>Abuja . Hybrid. 5+ years</p>
+                        <button>Figma</button>
+                        <button>UX Research</button>
+                        <button>Prototyping</button>
+                    </div>
+
+                    <div class="recomended-jobs-btn">
+                        <button class="accept-accep">Apply</button>
+                        <button class="reject-rejec">Save</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message">
+                <div class="section-header">
+                    <h3>Messages</h3>
+                    <a href="">Manage →</a>
+                </div>
+                 <div class="message-one">
+                   <div class="message-one-info">
+                        <h3>TechCorp - HR Team</h3>
+                        <p>Your interview has been confirmed for Ma...</p>
+                    </div>
+                    <div class="message-date">
+                        <p>10:42 AM</p>
+                    </div>                     
+                 </div>
+                
+
+                <div>
+                    <div class="message-one">
+                   <div class="message-one-info">
+                        <h3>Konga . Talent Team</h3>
+                        <p>We'd like to move you to next le...</p>
+                    </div>
+                    <div class="message-date">
+                        <p>Yesterday</p>
+                    </div>  
+                </div>
+
+                <div>
+                    <div class="message-one">
+                   <div  class="message-one-info">
+                        <h3>Paystack . Recruiter</h3>
+                        <p>Thank you for your interest, unfortu.....</p>
+                    </div>
+                    <div class="message-date">
+                        <p>Mar 1</p>
+                    </div>  
+                </div>
+            </div>
+
+            
+        </div>
     </section>
+
+    <script src="../scripts/candidate-dashboard.js"></script>
+</body>
