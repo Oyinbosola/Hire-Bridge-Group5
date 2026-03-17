@@ -1,0 +1,156 @@
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  background:#f5f7fb;
+  color:#1f2937;
+}
+
+.container{
+  max-width:1100px;
+  margin:40px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:10px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+h1{
+  font-family:'Montserrat', sans-serif;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+h2{
+  font-family:'Montserrat', sans-serif;
+  font-size:20px;
+  margin-bottom:15px;
+}
+
+/* STEPS */
+.steps{
+  display:flex;
+  gap:12px;
+  margin-bottom:35px;
+}
+
+.step{
+  background:#f1f5f9;
+  padding:10px 18px;
+  border-radius:10px;
+  font-weight:500;
+  color:#6b7280;
+}
+
+.step.active{
+  background:#e6f0ff;
+  color:#1E5ED6;
+  font-weight:600;
+}
+
+.step.green{
+  background:#e6f8f2;
+  color:#10B981;
+  font-weight:600;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+label{
+  display:block;
+  font-weight:500;
+  margin:14px 0 6px;
+}
+
+input, select{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  font-family:'Inter';
+}
+
+.row{
+  display:flex;
+  gap:15px;
+}
+
+.checkbox{
+  margin-top:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-weight:500;
+}
+
+.add{
+  margin-top:15px;
+  background:white;
+  border:1px solid #1E5ED6;
+  color:#1E5ED6;
+  padding:10px;
+  border-radius:8px;
+  width:100%;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* SKILLS */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:10px;
+}
+
+.skills span{
+  background:#f1f5f9;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:14px;
+}
+
+.skill-input{
+  border-style:dashed;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:35px;
+  display:flex;
+  justify-content:space-between;
+}
+
+.back{
+  background:#f1f5f9;
+  border:none;
+  padding:12px 22px;
+  border-radius:8px;
+  font-weight:600;
+}
+
+.next{
+  background:#1E5ED6;
+  color:white;
+  border:none;
+  padding:12px 28px;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}

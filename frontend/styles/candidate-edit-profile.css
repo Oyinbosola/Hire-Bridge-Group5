@@ -1,0 +1,188 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f5f7fb;
+  color:#1f2937;
+}
+
+.container{
+  max-width:1200px;
+  margin:40px auto;
+  padding:20px;
+}
+
+/* HEADER */
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+h1{
+  font-family:'Montserrat';
+  font-weight:700;
+}
+
+p{
+  color:#6b7280;
+}
+
+.actions button{
+  padding:10px 20px;
+  border-radius:8px;
+  font-weight:600;
+  margin-left:10px;
+  cursor:pointer;
+}
+
+.discard{
+  background:white;
+  border:1px solid #1E5ED6;
+  color:#1E5ED6;
+}
+
+.save{
+  background:#1E5ED6;
+  border:none;
+  color:white;
+}
+
+/* GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+/* CARD */
+
+.card{
+  background:white;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  padding:20px;
+  margin-bottom:20px;
+}
+
+.card h2{
+  font-family:'Montserrat';
+  margin-bottom:15px;
+}
+
+/* PROFILE PHOTO */
+
+.profile-row{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:15px;
+}
+
+.avatar{
+  width:80px;
+  height:80px;
+  background:#1E5ED6;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+}
+
+.upload{
+  padding:8px 14px;
+  border:1px solid #d1d5db;
+  background:white;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* FORM ELEMENTS */
+
+label{
+  display:block;
+  font-weight:500;
+  margin:12px 0 6px;
+}
+
+input, select, textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  font-family:'Inter';
+}
+
+textarea{
+  min-height:140px;
+  resize:none;
+}
+
+.row{
+  display:flex;
+  gap:12px;
+}
+
+.checkbox{
+  margin-top:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* ADD BUTTON */
+
+.add{
+  margin-top:15px;
+  width:100%;
+  padding:10px;
+  border:1px solid #1E5ED6;
+  color:#1E5ED6;
+  background:white;
+  border-radius:8px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* SKILLS */
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:10px;
+}
+
+.skills span{
+  background:#f1f5f9;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:14px;
+}
+
+.skill-input{
+  border-style:dashed;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+}
