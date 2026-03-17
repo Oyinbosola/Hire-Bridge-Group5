@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruiter Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/recruiter-dashboard.css">
+</head>
+<body>
+    <header class="header-container">
+        <div>
+            <img class="logo-five" src="../../assets/icons/logo-five.png" alt="">
+        </div>
+
+        <nav class="input-container">
+            <i class="ph-bold ph-magnifying-glass"></i>
+            <input type="text" placeholder="Search Candidates, Job">
+             <ul class="job-search-suggestions">
+                <li>Amara Obi</li>
+                <li>Emeka Uche</li>
+                <li>Kemi Adamu</li>
+                <li>Ngozi Okafor</li>
+                <li>Seun Idowu</li>
+                <li>Sadiq Garuba</li>
+                <li>Frontend Developer</li>
+                <li>UI /UX Developer</li>
+                <li>Technical Writer</li>
+                <li>Backend Developer</li>
+             </ul>
+        </nav>
+
+        <div class="header-icons">
+            <i class="ph-bold ph-envelope-simple"></i>
+            <i class="ph-bold ph-bell"></i>
+            <img src="../../assets/images/Ellipse 4.svg" alt="">
+        </div>
+    </header>
+
+    <section class="left-container">
+        <div class="left-container-div">
+           <div class="others">
+                <div class="dashboard">
+                    <i class="ph ph-squares-four"></i>
+                    <a href="">Dashboard</a>
+                 </div>
+
+                <div class="job-posting">
+                    <i class="ph ph-briefcase"></i>
+                    <a href="">Job postings</a>
+                </div>
+                
+                <div class="candidate">
+                    <i class="ph ph-user-circle-check"></i>
+                    <a href="">Candidates</a>
+                 </div>
+            </div>
+
+            <div class="hiring">
+                <h4>HIRING</h4>
+                <div class="pipeline">
+                    <i class="ph ph-kanban"></i>
+                    <a href="">Pipeline</a>
+                </div>
+
+                <div class="interview">
+                    <i class="ph ph-calendar"></i>
+                   <a href="">Interviews</a>
+                </div>
+            </div>
+
+           <div class="communication">
+             <h4>COMMUNICATION</h4>
+                 <div class="messages">
+                 <i class="ph ph-chat-text"></i>
+                 <a href="">Messages</a>
+                </div>
+           </div>
+
+            <div class="account">
+                <h4>ACCOUNT</h4>
+                <div class="profile-setting">
+                    <i class="ph ph-user-circle"></i>
+                    <a href="">Profile Settings</a>
+                </div>
+            </div>
+
+            <div class="profile">
+                <div>
+                    <img src="../../assets/images/Ellipse 4.svg" alt="">
+                </div>
+                <h5>Tolu Eze</h>
+                <p>HR MANAGER - TECHCORP NG</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="main-container">
+            <div class="dashboard-header">
+                <div class="dashboard-titles">
+                    <h2>Dashboard</h2>
+                    <span class="dashboard-date">Monday, March 9, 2026</span>
+                </div>
+
+                <button class="post-a-job-btn">Post a Job +</button>
+            </div>
+
+            <div class="stat-row">
+
+                <div class="stat-card">
+                    <h6>ACTIVE JOB POSTS</h6>
+                    <h4 class="active-jobs">8</h4>
+                     <p class="jobs-info">2 added this month</p>
+                </div>
+
+                <div class="stat-card">
+                     <h6>TOTAL APPLICANTS</h6>
+                     <h4 class="total-applicants">124</h4>
+                     <p class="applicants-info">Across all active posts</p>
+                </div>
+
+                <div class="stat-card">
+                    <h6>SHORTLISTED</h6>
+                    <h4 class="shortlisted-count">34</h4>
+                    <p class="shortlisted-info">27% shortlist rate</p>
+                </div>
+
+            </div>
+
+            <div class="pipeline-container">
+                  <div class="view">
+                    <h3>Candidate pipeline</h3>
+                     <a href="">View all <i class="ph ph-arrow-right"></i></a>
+                  </div>
+                    
+
+                  <div class="candidate-cards">
+                    <div class="candidate-card">
+                        <h6>APPLIED</h6>
+                        <h4>58</h4>
+                        <button>Amara Obi</button>
+                        <button>Kemi Adamu</button>
+                        <button>+56 more</button>
+                    </div>
+
+                    <div class="candidate-card">
+                        <h6>SHORTLISTED</h6>
+                        <h4>34</h4>
+                        <button>Ngozi Eze</button>
+                        <button>Chidi Okafor</button>
+                        <button>+32 more</button>
+                    </div>
+
+                    <div class="candidate-card">
+                        <h6>INTERVIEWED</h6>
+                        <h4>12</h4>
+                        <button>John Emmanuel</button>
+                        <button>Ife David</button>
+                        <button>+10 more</button>
+                    </div>
+
+                    <div class="candidate-card">
+                        <h6>OFFERED</h6>
+                        <h4>16</h4>
+                        <button>Amara Obi</button>
+                        <button>+16 more</button>
+                    </div>
+
+                    <div class="candidate-card">
+                        <h6>REJECTED</h6>
+                        <h4>19</h4>
+                        <button>Seun Idowu</button>
+                        <button>Kemi Atiba</button>
+                        <button>+56 more</button>
+                    </div>
+                    
+                    <div class="interview-container">
+                        <div class="upcoming">
+                            <h3>Upcoming Interviews</h3>
+                            <a href="">Schedule <i class="ph ph-arrow-right"></i></a>
+                        </div>
+
+                        <div class="schedule">
+                            <div class="schedule-one">
+                                <div class="schedule-one-date">
+                                    <h4>09</h4>
+                                    <h6>MAR</h6>
+                                </div>
+                                <div class="schedule-one-info">
+                                    <h4 class="schedule-name">Chukwu Emeka</h4>
+                                    <p>Backend engineer</p>
+                                    <p>10:00am - 11:00am</p>
+                                </div>
+                                <button class="schedule-btn">Virtual</button>
+                            </div>
+
+                            <div class="schedule-two">
+                                <div class="schedule-two-date">
+                                    <h4>10</h4>
+                                    <h6>MAR</h6>
+                                </div>
+                                <div class="schedule-two-info">
+                                    <h4 class="schedule-name">Chukwu Nanso</h4>
+                                    <p>Product Manager</p>
+                                    <p>12:00pm - 1:00pm</p>
+                                </div>
+                               <button class="schedule-btn">In-person</button>
+                            </div>
+
+                            <div class="schedule-three">
+                                <div class="schedule-three-date">
+                                    <h4>11</h4>
+                                    <h6>MAR</h6>
+                                </div>
+                                <div class="schedule-three-info">
+                                    <h4 class="schedule-name">Justin David</h4>
+                                    <p>Data Analyst</p>
+                                    <p>10:00am - 11:00am</p>
+                                </div>
+                                <button class="schedule-btn">Virtual</button>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+
+        </div>
+
+            <div class="recent-application-container">
+                <div class="recent-application-header">
+                    <h3>Recent Applicants</h3>
+                    <a href="">View all <i class="ph ph-arrow-right"></i></a>
+                </div>
+                
+                <div class="recent-application-tables">
+                    <table class="recent-application-table">
+                        <thead>
+                            <tr class="rows">
+                                <th>CANDIDATE</th>
+                                <th>APPLIED FOR</th>
+                                <th>EXPERIENCE</th>
+                                <th>DATE</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-rows">
+                            <tr>
+                                <td>Amara Obiora</td>
+                                <td>Frontend developer</td>
+                                <td>4 yrs</td>
+                                <td>March 3, 2026</td>
+                                <td><button class="td-btn">Shortlisted</button></td>
+                                <td ><a class="td-link" href="">Review</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Chukwu Emeka</td>
+                                <td>Backend developer</td>
+                                <td>5 yrs</td>
+                                <td>March 6, 2026</td>
+                                <td><button class="td-btn">Interview scheduled</button></td>
+                                <td><a class="td-link" href="">View Profile</a></td>
+                            </tr>
+
+                            <tr>
+                                <td>Fatima Garba</td>
+                                <td>UI/UX Designer</td>
+                                <td>3 yrs</td>
+                                <td>March 4, 2026</td>
+                                <td><button class="td-btn">Applied</button></td>
+                                <td><a class="td-link" href="">Review</a></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Kemi Adewale</td>
+                                <td>UI/UX Designer</td>
+                                <td>2 yrs</td>
+                                <td>March 4, 2026</td>
+                                <td><button class="td-btn">Offered</button></td>
+                                <td><a class="td-link" href="">View offer</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>         
+            </div>
+
+            <div class="active-job-container">
+                <div class="active-job-header">
+                    <h3>Active Job Post</h3>
+                    <a href="">Manage <i class="ph ph-arrow-right"></i></a>
+                </div>
+
+                <div class="job-one">
+                    <div class="job-logo">
+                        <i class="ph ph-desktop"></i>
+                    </div >
+                        
+                    <div class="job-one-desc">
+                        <h4>Senior Frontend Engineer</h4>
+                        <p>Lagos-Fulltime-5+ years</p>
+                    </div>
+
+                    <div class="job-btn">
+                        <button>42 applicants</button>
+                        <button>12 Shortlisted</button>
+                        <a href="">Open</a>
+                        <button>Edit</button>
+                    </div>
+                </div>
+
+                <div class="job-two">
+                    <div class="job-logo">
+                        <i class="ph ph-figma-logo"></i>
+                    </div>
+
+                    <div class="job-two-desc">
+                        <h4>UI/UX Designeer</h4>
+                        <p>Remote-Contract- 2-4 years</p>
+                    </div>
+
+                    <div class="job-btn">
+                        <button>28 applicants</button>
+                        <button>9 Shortlisted</button>
+                        <a href="">Open</a>
+                        <button>Edit</button>
+                    </div>
+
+                </div>
+
+                <div class="job-three">
+                    <div class="job-logo">
+                        <i class="ph ph-user-square"></i>
+                    </div>
+
+                    <div class="job-three-desc">
+                        <h4>Project Manager</h4>
+                        <p>Remote-Contract- 2-4 years</p>
+                    </div>
+
+                    <div class="job-btn">
+                        <button>19 applicants</button>
+                        <button>6 Shortlisted</button>
+                        <a " href="">Open</a>
+                        <button>Edit</button>
+                    </div>
+
+                </div>
+            </div>
+ 
+           <script src="../scripts/recruiter-dashboard.js"></script>
+           <script src="../scripts/api.js"></script>
+    </section>
+
+
+</body>
+</html>
