@@ -18,6 +18,7 @@ body{
     top: 0;
     width: 100vw;
     background-color: white;
+    z-index: 1000;
     
 }
 .logo-five{
@@ -54,7 +55,7 @@ body{
 
 .input-container ::placeholder{
     font-weight: 600px;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .job-search-suggestions {
@@ -107,6 +108,24 @@ body{
    
 }
 
+.message-icon-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.message-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #F44336; 
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
 .left-container{
    position: fixed;
    top: 70px;
@@ -141,7 +160,8 @@ body{
 }
 
 .others,
-.hiring{
+.hiring,
+.communication{
     border-bottom: 1px solid #e2e2e2 ;
     width: 220px;
     
@@ -199,11 +219,13 @@ body{
     font-weight: 300;
 }
 .profile img{
-    padding: 7px;
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    padding: 0; 
 }
-.main{
-    
-}
+
 .main-container{
     height: 100%;
     margin-left: 300px;
@@ -223,11 +245,12 @@ body{
     padding: 20px 30px;
 }
 
+
 .dashboard-titles h2 {
     color: #1e5ed6
 }
 
-.post-a-job-btn{
+.edit-profile{
     padding: 8px 7px;
     background-color: #1e5ed6;
     border: 1px solid #1e5ed6;
@@ -235,10 +258,66 @@ body{
     border-radius: 8px;
 }
 
+.browse-job{
+    padding: 8px 7px;
+    background-color: white;
+    border: 1px solid #1e5ed6;
+    color: #1e5ed6;
+    border-radius: 8px;
+}
+
+.complete-profile{
+    padding: 8px 7px;
+    background-color: white;
+    padding:10px 30px ;
+    margin-left: 30px;
+    width: 1005px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.complete-profile-progress{
+    width: 700px;
+}
+
+.complete-profile-progress p{
+    font-size: 14px;
+    font-weight: 200;
+}
+.complete-profile-btn{
+    height: 30px;
+    width: 150px;
+    background-color: #1e5ed6;
+    border: 1px solid #1e5ed6;
+    color: white;
+    border-radius: 8px;
+}
+
+.progress-bar{
+    width: 100%;
+    height: 6px;
+    background-color: #dde7f9;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill{
+    width: 65%;
+    height: 100%;
+    background-color: #1e5ed6;
+    border-radius: 10px;
+}
+
+.profile-icon i{
+    font-size: 40px;
+}
+
 .stat-row{
     display: flex;
     justify-content: space-between;
-    padding: 10px 30px;
+    padding: 20px 30px;
     align-items: center;
    
 }
@@ -265,240 +344,218 @@ body{
     color: #4a4a4a;
 }
 
-.pipeline-container{
-    
-    background-color: white;
-    width: 700px;
-    padding:20px 30px ;
-    margin-left: 30px;
-    border-radius: 5px;
-    margin-top: 10px;
-    
-    
+.dashboard-grid{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px 30px;
+  
 }
 
-.view{
+.my-applications,
+.recommended-jobs,
+.message,
+.upcoming-interviews {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.application-one{
     display: flex;
+    align-items: center;
+    padding: 10px;
     justify-content: space-between;
 }
 
-.view a{
-    text-decoration: none;
-    color: black;
+.application-one-details{
+    margin-left: -160px;
 }
 
-.candidate-cards{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 20px
-
+.application-two-details{
+    margin-left: -180px;
+}
+.application-three-details{
+    margin-left: -210px;
 }
 
-.candidate-card{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #e2e2e2 ;
-    padding: 10px;
-    gap: 5px;
-    border-radius: 5px;
-}
-
-.candidate-card button{
-    width: 100px;
-    height: 30px;
-    background-color: #e2e2e2;
-    color: #a7a7a7;
-    border: 1px solid;
-    border-radius: 5px;
-}
-
-.candidate-card h6{
-    color: ;
-}
-
-.candidate-card h4{
-    color: #4a4a4#8a8a8aa;
-}
-
-.interview-container{
-    margin-top: -63px;
-    background-color: white;
-    margin-left: 20px;
-    width: 298px;
-    border-radius: 5px;
-    padding: 10px;
-    
-   
-}
-
-.upcoming{
-    display: flex;
-    gap: 71px;
-
-}
-
-.upcoming a{
-    text-decoration: none;
-    color: black;
-}
-
-.schedule{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.schedule-one,
-.schedule-two,
-.schedule-three{
-    display: flex;
+.my-applications-logo{
+    font-size: 30px;
     gap: 5px;
 }
+.application-one-schedule button {
+    background-color: #dde7f9;
+    border: 0px ;
+    padding: 5px 25px;
+    color: #1e5ed6;
+    border-radius: 10px;
+}
 
-.schedule-one-date,
-.schedule-two-date,
-.schedule-three-date{
-    border: 1px solid #8a8a8a ;
+.application-two-schedule button {
+    background-color: #dde7f9;
+    border: 0px ;
+    padding: 5px 60px;
+    color: #1e5ed6;
+    border-radius: 10px;
+}
+
+.application-three-schedule button {
+    background-color: #dde7f9;
+    border: 0px ;
+    padding: 5px 50px;
+    color: #1e5ed6;
+    border-radius: 10px;
+}
+
+.section-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.section-header a{
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.pipeline-steps{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120%;
+  
+}
+
+.pipeline-steps::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #d1d5db; 
+  transform: translateY(-50%);
+  
+}
+.step{
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #9ca3af; 
+  position: relative;
+  z-index: 2;
+}
+.step.active{
+  background: #2563eb; 
+}
+
+.upcoming-interviews{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upcoming-interview-one{
+    display: flex;
+    gap: 20px;
+}
+.upcoming-interview-one-date{
+    border: 1px solid #7f7f7f ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 7px 9px;
+    height: 50px;
+    width: 60px;
+    border-radius: 5px;
+    
 }
 
-.schedule-one-info,
-.schedule-two-info,
-.schedule-three-info p{
-    font-size: 14px;
+.accept-accept,
+.accept-accep{
+    padding: 4px 14px;
+    background-color: #1e5ed6;
+    border: 1px solid #1e5ed6;
+    color: white;
+    border-radius: 8px;
 }
 
-.schedule-btn{
-    padding: 5px;
-    margin-top: 33px;
-    border: 0px #8a8a8a;
-    border-radius: 2px;
-    background-color: #f4f4f4;
-    color: #4a4a4a;
-}
-
-.recent-application-container{
-    padding: 20px 30px;
+.reject-reject,
+.reject-rejec{
+    padding: 4px 14px;
     background-color: white;
-    margin-left: 30px;
-    margin-top: 20px;
-    width: 990px;
-    border-radius: 5px;
+    border: 1px solid #1e5ed6;
+    color: #1e5ed6;
+    border-radius: 8px;
 }
 
-.recent-application-header{
+.accept-accept:disabled,
+.reject-reject:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.status-text {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.recomended-jobs-info{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+   padding: 10px;
 }
 
-.recent-application-header a{
-    text-decoration: none;
-    color: black;
-    
+.recomended-jobs-icon{
+    font-size:30px ;
 }
 
-.recent-application-tables{
-    
-    padding: 10px 0;
-    
-}
-.recent-application-table{
-    width: 100%;
-    
-}
-
-.recent-application-table{
-    text-align: left;
-    font-size: 13px;
-    font-weight: 600px;
-   
-    
-}
-
-.rows{
- background-color: #dbf5ec;
- color: #8a8a8a;
-}
-.recent-application-table td{
-    padding: 5px ;
-}
-
-.td-btn{
-    border: 0px;
-    padding: 5px;
-    border-radius: 5px;
-    font-weight: 800px;
-}
-
-.td-link{
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-}
-
-.active-job-container{
-    padding: 30px 30px;
-    background-color: white;
-    margin-left: 30px;
-    margin-top: 20px;
-    width: 990px;
-    border-radius: 5px;
-}
-
-.active-job-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.active-job-header a{
-    text-decoration: none;
-    color: black;
-}
-.job-one,
-.job-two,
-.job-three{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #e2e2e2;
-    padding: 10px;
-}
-
-.job-one-desc,
-.job-two-desc,
-.job-three-desc{
+.recomended-jobs-btn{
     display: flex;
     flex-direction: column;
-    margin-left: -350px;
+    gap: 10px;
 }
 
-.job-btn button{
-    border: 2px solid #1e5ed6;
-    padding: 5px;
-    background-color: white;
+.recomended-one-info{
+    margin-left: -150px;
+}
+
+.recomended-two-info{
+    margin-left: -150px;
+}
+
+.recomended-one-info button{
+    background-color: #dde7f9;
+    border: 0px ;
+    padding: 5px 25px;
     color: #1e5ed6;
-    border-radius: 5px;
-    display: inline-block;
-    gap: 5px;
+    border-radius: 10px;
+}
+.recomended-two-info button{
+    background-color: #dde7f9;
+    border: 0px ;
+    padding: 5px 25px;
+    color: #1e5ed6;
+    border-radius: 10px;
+}
+
+.message-one{
+    display: flex;
+    padding: 10px 0px;
+    justify-content: space-between;
+}
+
+.message-date p{
     font-size: 12px;
 }
 
-.job-btn a{
-    text-decoration: none;
-    background-color: #1e5ed6;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
+.message-one-info h3{
+    font-size: 13px;
+}
+.message-one-info p{
     font-size: 12px;
 }
-
-.job-logo{
-    font-size: 31px;
-}
-
-
