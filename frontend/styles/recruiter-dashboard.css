@@ -228,6 +228,7 @@ body{
 }
 
 .post-a-job-btn{
+    text-decoration: none;
     padding: 8px 7px;
     background-color: #1e5ed6;
     border: 1px solid #1e5ed6;
