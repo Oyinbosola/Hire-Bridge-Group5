@@ -14,9 +14,7 @@ if (progress === 100) {
 }
 
 const button = document.querySelector(".complete-profile-btn"); 
-button.addEventListener("click", () => {
-    alert("Profile page not ready yet!");
-});
+
 
 function updateStat(type, number, message) {
      const numEl = document.querySelector(`.stat-number[data-type="${type}"]`);
