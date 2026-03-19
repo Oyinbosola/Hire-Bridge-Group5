@@ -286,6 +286,27 @@ body{
     color: #000000;
 }
 
+.hidden {
+  display: none;
+}
+
+#sortOptions {
+  background: white;
+  border: 1px solid #ccc;
+  width: 180px;
+  position: absolute;
+  padding: 10px;
+}
+
+#sortOptions p {
+  cursor: pointer;
+  padding: 5px;
+}
+
+#sortOptions p:hover {
+  background: #eee;
+}
+
 .ranking{
     background: none;
     border: 1px solid #000000;

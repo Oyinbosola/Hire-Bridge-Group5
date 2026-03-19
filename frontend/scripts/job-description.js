@@ -75,6 +75,34 @@ job.style.display = "block"
 
 });
 
+const sortBtn = document.querySelector(".sort")
+const sortOptions = document.getElementById("sortOptions");
+const sortText = document.getElementById("sortText");
+
+
+sortBtn.addEventListener("click", () => {
+  sortOptions.classList.toggle("hidden");
+});
+
+sortOptions.addEventListener("click", (e) => {
+  const type = e.target.dataset.sort;
+
+  if (!type) return;
+
+  if (type === "newest") {
+    sortText.textContent = "Newest";
+    sortJobsByNewest();
+  }
+
+  if (type === "salary") {
+    sortText.textContent = "Salary";
+    sortJobsBySalary();
+  }
+
+  sortOptions.classList.add("hidden");
+});
+
+
 jobsForYouBtn.addEventListener("click", function(){
 jobsForYouBtn.classList.add("active");
 popularBtn.classList.remove("active");
@@ -111,7 +139,5 @@ job.style.display = "none"
 })
 
 })
-
-
 
 
