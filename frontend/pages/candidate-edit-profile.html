@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/candidate-edit-profile.css">
+
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div>
+      <h1>Edit Your Profile</h1>
+      <p>Update your personal and professional information</p>
+    </div>
+
+    <div class="actions">
+      <button class="discard">Discard Changes</button>
+      <button class="save">Save Profile</button>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <!-- LEFT COLUMN -->
+    <div>
+
+      <!-- Personal Details -->
+      <div class="card">
+        <h2>1. Personal Details</h2>
+
+        <div class="profile-row">
+          <div class="avatar">
+            📷
+          </div>
+
+          <button class="upload">Upload Photo</button>
+        </div>
+
+        <label>Full Name</label>
+        <input type="text">
+
+        <label>Professional Headline</label>
+        <input type="text">
+
+        <label>Location</label>
+        <input type="text">
+
+        <label>Website/Portfolio Link</label>
+        <input type="text">
+      </div>
+
+      <!-- Contact Information -->
+      <div class="card">
+        <h2>2. Contact Information</h2>
+
+        <div class="row">
+          <div>
+            <label>Email Address</label>
+            <input type="email">
+          </div>
+
+          <div>
+            <label>Phone Number</label>
+            <input type="text">
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="card">
+        <h2>3. Professional Summary</h2>
+
+        <label>Summary</label>
+        <textarea></textarea>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <!-- Work Experience -->
+      <div class="card">
+        <h2>4. Work Experience</h2>
+
+        <label>Title</label>
+        <input type="text">
+
+        <label>Employment type</label>
+        <select><option>Please select</option></select>
+
+        <label>Company or organization</label>
+        <input type="text">
+
+        <label class="checkbox">
+          <input type="checkbox" checked> I am currently working in this role
+        </label>
+
+        <div class="row">
+          <div>
+            <label>Start date</label>
+            <input type="month">
+          </div>
+
+          <div>
+            <label>End date</label>
+            <input type="month">
+          </div>
+        </div>
+
+        <label>Location</label>
+        <input type="text">
+
+        <label>Location type</label>
+        <select><option>Please select</option></select>
+
+        <button class="add">+ Add Experience</button>
+      </div>
+
+      <!-- Education -->
+      <div class="card">
+        <h2>5. Education</h2>
+
+        <div class="row">
+          <select><option>Degree</option></select>
+          <select><option>Institution</option></select>
+          <select><option>Graduation Year</option></select>
+        </div>
+
+        <button class="add">+ Add Education</button>
+      </div>
+
+      <!-- Skills -->
+      <div class="card">
+        <h2>6. Skills</h2>
+
+        <div class="skills">
+          <span>Python ×</span>
+          <span>JavaScript ×</span>
+          <span>React ×</span>
+          <span>Node.js ×</span>
+          <span>Cloud Computing ×</span>
+          <span>Agile Methodology ×</span>
+          <span>SQL ×</span>
+        </div>
+
+        <input class="skill-input" placeholder="+ Add a new skill">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

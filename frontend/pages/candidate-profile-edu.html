@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Profile Creation</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../styles/candidate-profile-edu.css"/>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Profile Creation</h1>
+
+  <!-- Steps -->
+  <div class="steps">
+    <div class="step active">✓ Sign In</div>
+    <div class="step">2 Basic Information</div>
+    <div class="step green">3 Experience</div>
+    <div class="step">4 Job Preferences</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- LEFT COLUMN -->
+    <div>
+      <h2>Experience & Skills</h2>
+
+      <label>Title</label>
+      <input type="text">
+
+      <label>Employment type</label>
+      <select><option>Please select</option></select>
+
+      <label>Company or organization</label>
+      <input type="text">
+
+      <label class="checkbox">
+        <input type="checkbox" checked> I am currently working in this role
+      </label>
+
+      <div class="row">
+        <div>
+          <label>Start date</label>
+          <input type="date">
+        </div>
+
+        <div>
+          <label>End date</label>
+          <input type="date">
+        </div>
+      </div>
+
+      <label>Location</label>
+      <input type="text">
+
+      <label>Location type</label>
+      <select><option>Please select</option></select>
+
+      <button class="add">+ Add Experience</button>
+
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+
+      <h2>Education</h2>
+
+      <label>School</label>
+      <input type="text">
+
+      <label>Degree</label>
+      <select><option>Please select</option></select>
+
+      <label>Field of study</label>
+      <input type="text">
+
+      <label>Grade</label>
+      <input type="text">
+
+      <div class="row">
+        <div>
+          <label>Start date</label>
+          <input type="date">
+        </div>
+
+        <div>
+          <label>End date</label>
+          <input type="date">
+        </div>
+      </div>
+
+      <button class="add">+ Add Experience</button>
+
+      <h2>Skills</h2>
+
+      <div class="skills">
+        <span>Python ×</span>
+        <span>Figma ×</span>
+        <span>HTML ×</span>
+        <span>UI Design ×</span>
+      </div>
+
+      <input class="skill-input" placeholder="+ Add a new skill">
+
+    </div>
+
+  </div>
+
+  <!-- Footer Buttons -->
+  <div class="footer">
+    <button class="back">‹ Back</button>
+    <button class="next">Next ›</button>
+  </div>
+
+</div>
+
+</body>
+</html>
