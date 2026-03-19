@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Job Posting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/job-posting.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <img src="../../assets/icons/logo-four.svg" alt="HireBridge Logo">
+      
+    </div>
+
+    <!-- Profile Icon -->
+    <div class="profile-icon">
+      <div class="icon-circle">👤</div>
+    </div>
+
+    <!-- Form -->
+    <div class="form">
+
+      <div class="form-group">
+        <label>JOB TITLE</label>
+        <input type="text" placeholder="Enter job title" />
+      </div>
+
+      <div class="form-group">
+        <label>JOB DESCRIPTION</label>
+        <textarea placeholder="Enter job description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>REQUIRED SKILLS</label>
+        <div class="skills-box">
+          <span>Python</span>
+          <span>Data Analysis</span>
+          <span>Excel</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>EXPERIENCE LEVEL</label>
+        <select>
+          <option>Mid-level</option>
+          <option>Junior</option>
+          <option>Senior</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>LOCATION</label>
+        <input type="text" placeholder="Enter location" />
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button class="edit-btn">EDIT</button>
+        <button class="delete-btn">DEACTIVATE JOB POST</button>
+      </div>
+
+    </div>
+
+  </div>
+
+   <script src="../scripts/api.js"></script>  
+   <script src="../scripts/job-posting.js"></script>   
+</body>
+</html>
