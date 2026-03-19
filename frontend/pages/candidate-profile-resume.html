@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile Creation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/candidate-profile-resume.css">
+
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Profile Creation</h1>
+
+  <!-- Steps -->
+  <div class="steps">
+    <div class="step active">✔ Sign In</div>
+    <div class="step">2 Basic Information</div>
+    <div class="step">3 Experience</div>
+    <div class="step green">4 Job Preferences</div>
+  </div>
+
+  <div class="grid">
+
+    <!-- LEFT -->
+    <div>
+      <h2>Resume</h2>
+
+      <label>Upload resume</label>
+      <input type="text">
+
+      <label>Portfolio link</label>
+      <input type="text">
+
+      <label>LinkedIn profile</label>
+      <input type="text">
+
+      <label>Personal website</label>
+      <input type="text">
+
+      <h2 class="mt">Profile Visibility</h2>
+
+      <div class="visibility">
+        <button class="pill active">Open to work</button>
+        <button class="pill outline">Visible to recruiters</button>
+        <button class="pill outline">Private account</button>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div>
+      <h2>Job Preferences</h2>
+
+      <label>Desired job role</label>
+      <input type="text">
+
+      <label>Preferred location</label>
+      <select><option>Please select</option></select>
+
+      <label>Preferred work type</label>
+      <select><option>Remote</option></select>
+
+      <label>Employment type</label>
+      <select><option>Full-time</option></select>
+
+      <label>Expected salary range</label>
+      <select><option>$70,000 - 100,000</option></select>
+
+      <label>Availability</label>
+      <select><option>Within 2 weeks</option></select>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <button class="back">‹ Back</button>
+    <button class="complete">Complete profile</button>
+  </div>
+
+</div>
+
+</body>
+</html>
