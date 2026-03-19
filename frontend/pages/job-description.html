@@ -1,14 +1,16 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>job-status</title>
+    <title>job-description</title>
     <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/job-status.css">
+    <link rel="stylesheet" href="../styles/job-description.css">
+    <!-- <script src="../scripts/api.js" defer></script> -->
+    <script src="../scripts/job-description.js" defer></script>
 </head>
 <body>
     <div class="gridbox">
@@ -36,7 +38,7 @@
                    <i class="ph ph-user-check"></i>
                    <a href="job-status.html">My Applications</a>
                    </div>
-                   <p class="appl-num">6</p>
+                   <p class="num">6</p>
                </div>
            </div>
            <div class="hiring">
@@ -74,47 +76,63 @@
                </div>
            </div>
         </div>
-                 
+                 <div class="profile-info">
+                       <img src="../../assets/images/Ellipse 5.svg" alt="profile picture">
+                    <div class="name">
+                       <h3>Chukwu Emeka</h3>
+                       <p>Product Designer</p>
+                   </div>
+               </div>
         </section>
         
         <!-- This is the middle section,the job listings section-->
         <section class="section2">
             <!-- this part contains the real purpose of the webpage-->
             <div class="middle-header">
-              <div class="my-applied">
-                <div class="My-appl">
-                  <h3>My Applications > <span class="applied">Applied</span></h3>
-               </div>
+                <h2 class="heading">Job Listings</h2>
+                <input class="search" type="search" name="" id="searchJob" placeholder="Search job by title, skill or location">  
+                     
           <!-- this filters and allows for easy searching-->
+               <div class="filters">
                    <div class="fltr-btns">
-                       <button class="fltr-btn">Applied</button>
-                       <button class="fltr-btn">Saved</button>
-                       <button class="fltr-btn">In progress</button>
-                       <button class="fltr-btn">Archived</button>
+                       <button class="fltr-btn">Product Designer</button>
+                       <button class="fltr-btn">UI Designer</button>
+                       <button class="fltr-btn">UX Designer</button>
                    </div>
+                   <button class="clr-fltr">Clear Filters</button>
               </div>
-              <div class="profile-info">
-                       <img class="pic" src="../../assets/images/Ellipse 5.svg" alt="profile picture">
-                    <div class="name">
-                       <h3>Chukwu Emeka</h3>
-                       <p>Product Designer</p>
-                   </div>
-               </div>
-               
           </div>
-         
+          <!-- the tabs and sorting section-->
+            <div class="filtering">
+                <div class="tabs">
+                  <button class="tab jobs-for-you" data-tab="jobs">Jobs For You</button>
+                  <button class="tab popular" data-tab="popular">Popular</button>
+                </div>
+                <div class="sort">
+                    <p>Sort:</p>
+                    <button class="ranking">
+                     <span id="sortText">Newest</span>   
+                        <i class="ph-fill ph-caret-down"></i>
+                    </button>
+                    <div id="sortOptions" class="hidden">
+    <p id="sortSalary" data-sort="newest">Newest</p>
+    <p id="sortNewest" data-sort="salary">Salary (High → Low)</p>
+  </div>
+                </div>
+            </div>
+            
             <!-- this is the list of the available jobs -->
             <div class="listings">
                 <!-- KONGA --> 
-                <div class="box brand">
+                <div class="job-card konga">
                   <div class="left-details">
                     <div class="konga-logo">
                         <img src="../../assets/images/konga.svg" alt="">
                     </div>
                    
                     <div class="details">
-                        <h3>Konga</h3>
-                        <p>Product Designer</p>
+                        <h3 >Konga</h3>
+                        <p class="job-title">Product Designer</p>
                         <div class="loc-and-views">
                             <div class="loc">
                                 <i class="ph-fill ph-map-pin"></i>
@@ -122,7 +140,7 @@
                             </div>
                             <div class="views">
                                 <i class="ph-fill ph-eye"></i>
-                                <p> 300 views</p>
+                                <p class="job-views"> 300 views</p>
                             </div>
                         </div>
                         <div class="info">
@@ -132,26 +150,30 @@
                         </div>
                     </div>
                   </div>
-                    <!-- the right part containing the Application status-->
+                    <!-- the right part containing the salary and job description-->
                     <div class="right-details">
-                        <p class="appl-status">Your Application Status</p>
-                        <div class="appl-stats">
-                            <p class="appl-sent">Application sent</p>
-                            <p class="appl-stat">Waiting</p>
+                        <div class="icons">
+                            <i class="ph-fill ph-bookmark"></i>
+                            <i class="ph-fill ph-info"></i>
+                        </div>
+                        <div class="job-info">
+                            <p>Team</p>
+                            <p>Product and design</p>
+                            <p><span class="salary">$150k</span> / year</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Flutterwave -->
-                <div class="box brand">     
+                <div class="job-card">     
                   <div class="left-details">
-                    
-                        <img class="flutterwave-logo" src="../../assets/icons/flutterwave.svg" alt="">
-                    
+                    <div class="flutterwave-logo">
+                        <img src="../../assets/icons/Flutterwave.svg" alt="">
+                    </div>
                    
                     <div class="details">
-                        <h3>Flutterwave</h3>
-                        <p>UI/UX Lead</p>
+                        <h3 >Flutterwave</h3>
+                        <p class="job-title">UI/UX Lead</p>
                         <div class="loc-and-views">
                             <div class="loc">
                                 <i class="ph-fill ph-map-pin"></i>
@@ -159,7 +181,7 @@
                             </div>
                             <div class="views">
                                 <i class="ph-fill ph-eye"></i>
-                                <p>50 views</p>
+                                <p class="job-views">50 views</p>
                             </div>
                         </div>
                         <div class="info">
@@ -169,25 +191,29 @@
                         </div>
                     </div>
                   </div>
-                    <!-- the right part containing the Application status-->
+                    <!-- the right part containing the salary and job description-->
                     <div class="right-details">
-                       <p class="appl-status">Your Application Status</p>
-                        <div class="appl-stats">
-                            <p class="appl-pend">Application pending</p>
-                            <p class="appl-stat">Waiting</p>
+                        <div class="icons">
+                            <i class="ph-fill ph-bookmark"></i>
+                            <i class="ph-fill ph-info"></i>
+                        </div>
+                        <div class="job-info">
+                            <p>Team</p>
+                            <p>Product and design</p>
+                            <p><span class="salary">$300k</span> / year</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Paystack -->
-                <div class="box brand">
+                <div class="job-card">
                   <div class="left-details">
                     
-                        <img class="paystack-logo" src="../../assets/images/Paystack Merchant.svg" alt="">
-
+                       <img class="paystack-logo" src="../../assets/images/Paystack Merchant.svg" alt="">
+                    
                     <div class="details">
-                        <h3>Paystack</h3>
-                        <p>Digital Designer</p>
+                        <h3 >Paystack</h3>
+                        <p class="job-title">Digital Designer</p>
                         <div class="loc-and-views">
                             <div class="loc">
                                 <i class="ph-fill ph-map-pin"></i>
@@ -195,7 +221,7 @@
                             </div>
                             <div class="views">
                                 <i class="ph-fill ph-eye"></i>
-                                <p> 100 views</p>
+                                <p class="job-views"> 100 views</p>
                             </div>
                         </div>
                         <div class="info">
@@ -205,26 +231,28 @@
                         </div>
                     </div>
                   </div>
-                    <!-- the right part containing the Application status-->
+                    <!-- the right part containing the salary and job description-->
                     <div class="right-details">
-                        <p class="appl-status">Your Application Status</p>
-                        <div class="appl-stats">
-                            <p class="appl-rej">Application rejected</p>
-                            <p class="appl-stat">Search for other jobs</p>
+                        <div class="icons">
+                            <i class="ph-fill ph-bookmark"></i>
+                            <i class="ph-fill ph-info"></i>
+                        </div>
+                        <div class="job-info">
+                            <p>Team</p>
+                            <p>Product and design</p>
+                            <p><span class="salary">$100k</span> / year</p>
                         </div>
                     </div>
                 </div>
                  
                 <!-- Google -->
-                <div class="box brand">
+                 <div class="job-card">
                   <div class="left-details">
                     
                         <img class="google-logo" src="../../assets/icons/google.svg" alt="">
-                    
-                   
                     <div class="details">
-                        <h3>Google Inc.</h3>
-                        <p>Product Designer</p>
+                        <h3 >Google Inc.</h3>
+                        <p class="job-title">Product Designer</p>
                         <div class="loc-and-views">
                             <div class="loc">
                                 <i class="ph-fill ph-map-pin"></i>
@@ -232,7 +260,7 @@
                             </div>
                             <div class="views">
                                 <i class="ph-fill ph-eye"></i>
-                                <p> 700 views</p>
+                                <p class="job-views"> 700 views</p>
                             </div>
                         </div>
                         <div class="info">
@@ -242,26 +270,30 @@
                         </div>
                     </div>
                   </div>
-                    <!-- the right part containing the Application status-->
+                    <!-- the right part containing the salary and job description-->
                     <div class="right-details">
-                        <p class="appl-status">Your Application Status</p>
-                        <div class="appl-stats">
-                            <p class="appl-acc">Application accepted</p>
-                            <p class="appl-stat">Send in a message</p>
+                        <div class="icons">
+                            <i class="ph-fill ph-bookmark"></i>
+                            <i class="ph-fill ph-info"></i>
+                        </div>
+                        <div class="job-info">
+                            <p>Team</p>
+                            <p>Product and design</p>
+                            <p><span class="salary">$200k</span> / year</p>
                         </div>
                     </div>
-                </div>
+                </div> 
                 
                 <!-- GitHub -->
-                <div class="box brand">
+                <div class="job-card">
                   <div class="left-details">
- 
+                    
                         <img class="github-logo" src="../../assets/icons/GitHub.svg" alt="">
                     
                    
                     <div class="details">
-                        <h3>Github</h3>
-                        <p>Product Designer</p>
+                        <h3 >Github</h3>
+                        <p class="job-title">Product Designer</p>
                         <div class="loc-and-views">
                             <div class="loc">
                                 <i class="ph-fill ph-map-pin"></i>
@@ -269,7 +301,7 @@
                             </div>
                             <div class="views">
                                 <i class="ph-fill ph-eye"></i>
-                                <p> 310 views</p>
+                                <p class="job-views"> 310 views</p>
                             </div>
                         </div>
                         <div class="info">
@@ -279,26 +311,27 @@
                         </div>
                     </div>
                   </div>
-                    <!-- the right part containing the Application status-->
+                    <!-- the right part containing the salary and job description-->
                     <div class="right-details">
-                        <p class="appl-status">Your Application Status</p>
-                        <div class="appl-stats">
-                            <p class="appl-sent">Application sent</p>
-                            <p class="appl-stat">Waiting</p>
+                        <div class="icons">
+                            <i class="ph-fill ph-bookmark"></i>
+                            <i class="ph-fill ph-info"></i>
+                        </div>
+                        <div class="job-info">
+                            <p>Team</p>
+                            <p>Product and design</p>
+                            <p><span class="salary">$50k</span> / year</p>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Anthropic -->
-                <div class="box brand">
+                <div class="job-card">
                   <div class="left-details">
-                    
-                        <img class="anthropic-logo" src="../../assets/icons/anthropic.svg" alt="">
-                    
-                   
+                        <img class="anthropic-logo" src="../../assets/icons/Anthropic.svg" alt="">
                     <div class="details">
-                        <h3>Anthropic</h3>
-                        <p>Product Designer</p>
+                        <h3 >Anthropic</h3>
+                        <p class="job-title">Product Designer</p>
                         <div class="loc-and-views">
                             <div class="loc">
                                 <i class="ph-fill ph-map-pin"></i>
@@ -306,7 +339,7 @@
                             </div>
                             <div class="views">
                                 <i class="ph-fill ph-eye"></i>
-                                <p> 300 views</p>
+                                <p class="job-views"> 300 views</p>
                             </div>
                         </div>
                         <div class="info">
@@ -316,19 +349,62 @@
                         </div>
                     </div>
                   </div>
-                    <!-- the right part containing the Application status-->
+                    <!-- the right part containing the salary and job description-->
                     <div class="right-details">
-                      <p class="appl-status">Your Application Status</p>
-                        <div class="appl-stats">
-                            <p class="appl-sent">Application sent</p>
-                            <p class="appl-stat">Waiting</p>
+                        <div class="icons">
+                            <i class="ph-fill ph-bookmark"></i>
+                            <i class="ph-fill ph-info"></i>
+                        </div>
+                        <div class="job-info">
+                            <p>Team</p>
+                            <p>Product and design</p>
+                            <p><span class="salary">$150k</span> / year</p>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
-       
+        
+        <!-- This is the third section ,it's Konga clicked-->
+        <section class="section3">
+            <div class="job-details">
+                    <div class="konga-logo">
+                        <img src="../../assets/images/konga.svg" alt="">
+                    </div>
+                    <div>
+                        <h2>Product Designer</h2>
+                        <p>Konga, Lagos Nigeria</p>
+                    </div>
+            </div>
+            <!-- Qualifications for Konga -->
+            <div class="qualifications">
+                <div class="minimum">
+                    <h3>Minimum qualifications:</h3>
+                    <ul class="details-min min-quali">
+                        <li>• Bachelor’s degree in Product Design/ related field, or equivalent practical experience</li>
+                        <li>• 2 years of experience as aUX or interaction Designer.</li>
+                        <li>• Experience in representing and advocating for UI and users</li>
+                    </ul>
+                </div>
+                <div class="preferred">
+                    <h3>Preferred qualifications:</h3>
+                    <ul class="details-pref pref-quali">
+                        <li>• Strong collaboration and presentation skills</li>
+                        <li>• Excellent leadership, communication and team work skills.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-the-job">
+                <h3 class="about">About the Job</h3>
+                <p class="about2">At Konga, we are looking for a creative and user-focused Product Designer to help shape the online shopping experience for millions of customers. As a Product Designer, you will be responsible for designing intuitive, engaging, and visually appealing digital experiences across the Konga website and mobile platforms.
+</p>
+            </div>
+            <button class="read-more">Read more   <i class="ph-fill ph-caret-down"></i></button>
+            <div class="apply">
+                <a href="job-application.html" class="apply-btn">Apply Now</a>
+                <a href="" class="mesg"><i class="ph-fill ph-chat-circle-dots"></i></a>
+            </div>
+        </section>
     </div>
 </body>
 </html>

@@ -15,7 +15,7 @@ body{
 .gridbox{
     display: grid;
     height: 100vh;
-    grid-template-columns: 36rem 1fr;
+    grid-template-columns: 36rem 66rem 42rem;
     grid-template-rows: 1fr;
     
 }
@@ -49,7 +49,7 @@ body{
     align-items: flex-start;
     margin-bottom: auto;
     font-size: 1.6rem;
-}
+} 
 
 .section1 a{
     text-decoration: none;
@@ -76,11 +76,16 @@ body{
     gap: 11rem;
 }
 
+.jl i,
+.jl a{
+    color: #1E5ED6;
+}
+
 .jl-new{
     padding: 0.2rem 0.5rem;
     border-radius: 0.8rem;
     color: #FFFFFF;
-    background-color: #4A4A4A;
+    background-color: #10B981;
     font-weight: Medium;
 }
 
@@ -90,23 +95,11 @@ body{
     gap: 10.2rem;
 }
 
-.appl i,
-.appl a{
-    color: #1E5ED6;
-}
-
-.appl-num{
-    background-color: #10B981;
-    color: #FFFFFF;
-    padding: 0.1rem 0.5rem;
-    border-radius: 2rem;
-}
-
 .num{
     padding: 0.1rem 0.5rem;
     border-radius: 2rem;
-    color: rgba(0,0,0,0.5);
     background-color: #D9D9D9;
+    color: rgba(0,0,0,0.5);
 }
 
 .hiring{
@@ -157,35 +150,17 @@ body{
     align-items: center;
 }
 
-.section2{
-    background-color: rgba(30, 94, 214, 0.05);
-    padding: 8rem 2rem 0rem;
-}
-
-.middle-header{
-    display: flex;
-    align-items: center;
-}
-
-.my-applied{
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-    justify-content: center;
-    align-items: flex-start;
-    margin-right: auto;
-}
-
 .profile-info{
     display: flex;
     gap: 0.8rem;
-    align-items: center;
+    border-top: 1px solid #E2E2E2;
+    padding: 3rem 0.4rem;
 }
 
 .name{
     display: flex;
+    gap: 0.4rem;
     flex-direction: column;
-    gap: 0.2rem;
 }
 
 .name h3{
@@ -197,16 +172,59 @@ body{
     color: #8A8A8A;
 }
 
-.applied{
-    color: #1E5ED6;
-    font-weight: bold;
-    font-size: 2.4rem;
+.section2{
+    background-color: rgba(30, 94, 214, 0.05);
+    padding: 8rem 2rem 0rem;
 }
 
-.fltr-btns{
-    gap: 1rem;
+.middle-header{
     display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.heading{
+    color: #1E5ED6;
+    font-weight: bold;
+}
+
+.search{
+    display: flex;
+    padding: 0.9rem 10.5rem 0.9rem 1.2rem;
+    background-color: #FFFFFF;
+    border-radius: 1.2rem;
+    gap: 0.5rem;
+    align-items: center;
+    color: rgba(0,0,0,0.5);
+    width: 62.6rem;
+    height: 4.8rem;
+}
+
+.search:focus{
+    outline-color: #1E5ED6;
+    border-color: #1E5ED6;
+    color: rgba(0,0,0,0.7);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    padding: 1rem;
+}
+
+.filters{
+    display: flex;
+    gap: 3rem;
     margin-bottom: 2rem;
+}
+.fltr-btns{
+    gap: 0.8rem;
 }
 
 .fltr-btn{
@@ -224,6 +242,71 @@ body{
     color: #FFFFFF;
 }
 
+.clr-fltr{
+    background: none;
+    border: none;
+    color: #1E5ED6;
+    padding: 0.8rem 1rem;
+    font-weight: medium;
+}
+
+.filtering{
+    display: flex;
+    gap: 22.4rem;
+    align-items: center;
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+}
+
+.tabs{
+    display: flex;
+    gap: 1.6rem;
+}
+
+.tab{
+    color: #000000;
+    font-weight: bold;
+    border: none;
+    background: none;
+}
+
+.tab.active{
+    color: #1E5ED6;
+    font-weight: bold;
+}
+
+.sort{
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.sort p{
+    font-weight: bold;
+    color: #000000;
+}
+
+.hidden {
+  display: none;
+}
+
+#sortOptions {
+  background: white;
+  border: 1px solid #ccc;
+  width: 180px;
+  position: absolute;
+  padding: 10px;
+}
+
+#sortOptions p {
+  cursor: pointer;
+  padding: 5px;
+}
+
+#sortOptions p:hover {
+  background: #eee;
+}
+
 .ranking{
     background: none;
     border: 1px solid #000000;
@@ -239,20 +322,22 @@ body{
     grid-row-gap: 2.4rem;
 }
 
-
-.brand{
-    background-color: #FFFFFF;
-    padding: 1.2rem 1.2rem;
-    border-radius: 0.8rem;
+.job-card{
     display: flex;
     justify-content: space-between;
     font-size: 1.8rem;
+    background-color: #FFFFFF;
+    padding: 1.6rem;
+    border-radius: 0.8rem;
 }
-
 
 .left-details{
     display: flex;
     gap: 3.2rem;
+}
+
+.konga{
+    border: 1px solid #1E5ED6;
 }
 
 .konga-logo{
@@ -293,10 +378,38 @@ body{
     color: #808080;
 }
 
+.right-details{
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.job-info{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.5);
+    font-weight: regular;
+}
+
+.salary{
+    font-size: 1.6rem;
+    color: #000000;
+    font-weight: bold;
+}
+
 .flutterwave-logo{
     background-color: #A2CEF2;
     border-radius: 0.8rem;
-    padding: 1rem;
+    padding: 1.3rem;
 }
 
 .paystack-logo{
@@ -319,67 +432,111 @@ body{
 
 .anthropic-logo{
     border-radius: 0.8rem;
-    padding: 1rem;
+    padding: 1.3rem;
     background-color: #D9D9D9;
 }
 
-.right-details{
+.section3{
+    padding: 8rem 4rem 0rem;
+} 
+
+.job-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.4rem;
+    margin-bottom: 1.6rem;
+}
+
+.qualifications{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    border-bottom: 2px solid #D9D9D9;
+    border-top: 2px solid #D9D9D9;
+    padding: 1.6rem 0rem;
+}
+
+.minimum,
+.preferred{
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    padding: 0rem 2rem;
+}
+.minimum h3,
+.preferred h3{
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.6rem;
 }
 
-.appl-status{
-    color: rgba(0, 0, 0, 0.5);
-}
-
-.appl-stats{
+.min-quali,
+.pref-quali{
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.8rem;
 }
 
-.appl-sent{
-    width: 27.4rem;
-    padding: 0.8rem 1rem;
+.min-quali li,
+.pref-quali li{
+    list-style: none;
+    font-size: 1.6rem;
+    color: rgba(0,0,0,0.5);
+}
+
+.about-the-job{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    border-bottom: 2px solid #D9D9D9;
+    padding: 1.6rem 2rem;
+    margin-bottom: 1.2rem;
+}
+
+.about{
+    font-size: 1.6rem;
+    color: #000000;
+}
+
+.about2{
+    font-size: 1.6rem;
+    color: rgba(0,0,0,0.5);
+}
+
+.read-more{
+    background: none;
+    border: none;
     color: #1E5ED6;
-    background-color: rgba(30, 94, 214, 0.15);
-    border-radius: 0.8rem;
-    text-align: center;
+    padding: 0.8rem 1rem;
+    font-weight: medium;
+    font-size: 1.2rem;
 }
 
-.appl-stat{
+.apply{
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+
+.apply a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.apply-btn{
     width: 27.4rem;
     padding: 0.8rem 1rem;
     color: #FFFFFF;
     background-color: #1E5ED6;
     border-radius: 0.8rem;
     text-align: center;
+    font-weight: bold;
 }
 
-.appl-pend{
-    width: 27.4rem;
-    padding: 0.8rem 1rem;
-    color: #D6C11E;
-    background-color: rgba(214, 193, 30, 0.15);
+.mesg{
+    background-color: #10B981;
     border-radius: 0.8rem;
-    text-align: center;
-}
-
-.appl-rej{
-    width: 27.4rem;
-    padding: 0.8rem 1rem;
-    color: #E23535;
-    background-color: rgba(226, 53, 53, 0.15);
-    border-radius: 0.8rem;
-    text-align: center;
-}
-
-.appl-acc{
-    width: 27.4rem;
-    padding: 0.8rem 1rem;
-    color: #10B981;
-    background-color: rgba(16, 185, 129, 0.15);
-    border-radius: 0.8rem;
-    text-align: center;
+    padding: 1rem;
 }
