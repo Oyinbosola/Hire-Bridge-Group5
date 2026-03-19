@@ -1,3 +1,25 @@
+function loadActiveJobs() {
+    const jobOneBtns = document.querySelectorAll(".job-one .job-btn button");
+    jobOneBtns[0].textContent = "42 applicants";
+    jobOneBtns[1].textContent = "12 Shortlisted";
+
+    const jobTwoBtns = document.querySelectorAll(".job-two .job-btn button");
+    jobTwoBtns[0].textContent = "28 applicants";
+    jobTwoBtns[1].textContent = "9 Shortlisted";
+
+    const jobThreeBtns = document.querySelectorAll(".job-three .job-btn button");
+    jobThreeBtns[0].textContent = "19 applicants";
+    jobThreeBtns[1].textContent = "6 Shortlisted";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadStats();
+    loadPipeline();
+    loadRecentApplicants();
+    loadActiveJobs();  // safe now
+});
+
+
 const dateElement = document.querySelector(".dashboard-date");
 const today = new Date();
 const formattedDate = today.toDateString();
