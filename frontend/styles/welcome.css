@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter', 'montserrat';
+}
+
+body{
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url(../../assets/images/background.png);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: #ffffff;
+}
+
+.hero-container{
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.logo-card{
+    display: inline-block;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    width: 800;
+    height: 78;
+    top: 298px;
+    left: 363px;
+   opacity: 1;
+   line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+
+
+}
+
+.tagline{
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.divider{
+    width: 300px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.4);
+    margin: 0 auto 20px;
+}
+
+.instruction{
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn{
+    
+    width: 100%;
+    max-width: 350px;
+    height: 50px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    
+    background: white;
+    color: #2b5876;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none; 
+    margin: 10px auto;
+    cursor: pointer;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
