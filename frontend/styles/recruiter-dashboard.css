@@ -502,4 +502,240 @@ body{
     font-size: 31px;
 }
 
+/* RESPONSIVENESS */
 
+@media (max-width: 1350px) {
+
+    .header-container {
+        gap: 100px ;
+        padding: 10px 20px;
+    }
+
+    .main-container {
+        margin-left: 240px; 
+    }
+
+    .left-container-div {
+        padding: 40px 20px;
+    }
+
+    .stat-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .stat-card {
+        flex: 1 1 30%;
+        padding: 15px;
+    }
+
+    .pipeline-container {
+        width: 100% ;
+        margin-left: 0;
+    }
+
+    .interview-container {
+        width: 100% ;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .pipeline-container,
+    .interview-container {
+        display: block;
+    }
+    .recent-application-container {
+        width: 100% ;
+        margin-left: 0;
+    }
+    .active-job-container {
+        width: 100% ;
+        margin-left: 0;
+    }
+    .job-one-desc,
+    .job-two-desc,
+    .job-three-desc {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 1210px) {
+
+    .header-container {
+        gap: 60px;
+    }
+
+    .left-container-div {
+        padding: 30px 15px;
+    }
+
+    .main-container {
+        margin-left: 200px; 
+    }
+
+    .stat-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .stat-card {
+        flex: 1 1 45%;
+        min-width: 260px;
+    }
+
+    .pipeline-container,
+    .interview-container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .interview-container {
+        margin-top: 20px;
+    }
+
+    .candidate-cards {
+        flex-wrap: wrap;
+    }
+
+    .candidate-card {
+        flex: 1 1 45%;
+    }
+
+    .recent-application-container {
+        width: 100% ;
+        margin-left: 0;
+    }
+
+    .active-job-container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .job-one,
+    .job-two,
+    .job-three {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .job-one-desc,
+    .job-two-desc,
+    .job-three-desc {
+        margin-left: 0 ;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    * {
+        max-width: 100%;
+    }
+
+   
+    .header-container {
+        flex-direction: column;
+        gap: 10px ;
+        align-items: stretch;
+        padding: 10px;
+    }
+    .input-container {
+        width: 100%;
+    }
+
+    .header-icons {
+        width: 100%;
+        justify-content: space-between;
+        margin-left: 0;
+    }
+
+    .left-container {
+        position: static;
+        width: 100%;
+    }
+
+    .left-container-div {
+        padding: 10px;
+    }
+
+    .others,
+    .hiring,
+    .communication,
+    .account {
+        width: 100%;
+        border: none;
+    }
+
+    .main-container {
+        margin-left: 0 ;
+        margin-top: 140px;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .stat-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .pipeline-container {
+        width: 100% ;
+        margin-left: 0;
+    }
+
+    .interview-container {
+        width: 100% ;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .candidate-cards {
+        flex-direction: column;
+    }
+
+
+    .upcoming {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .recent-application-container {
+        width: 100% ;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .recent-application-tables {
+        overflow-x: auto;
+    }
+
+   
+    .active-job-container {
+        width: 100% ;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .job-one,
+    .job-two,
+    .job-three {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .job-one-desc,
+    .job-two-desc,
+    .job-three-desc {
+        margin-left: 0 ;
+    }
+
+}

@@ -34,6 +34,11 @@ information.addEventListener("click", function(){
     window.location.href = "candidate-profile-info.html";
 });
 
+const experience = document.querySelector(".exp");
+experience.addEventListener("click", function(){
+    window.location.href = "candidate-profile-edu.html";
+});
+
 const jobPreferences = document.querySelector(".job-pref");
 jobPreferences.addEventListener("click", function(){
     window.location.href = "candidate-profile-resume.html";

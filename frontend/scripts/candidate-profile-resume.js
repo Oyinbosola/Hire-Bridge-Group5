@@ -17,12 +17,16 @@ const experience = document.querySelector(".exp");
 experience.addEventListener("click", function(){
     window.location.href = "candidate-profile-edu.html";
 });
-const backBtn = document.querySelector(".back")
-backBtn.addEventListener("click", function(){
-    window.location.href = "candidate-profile-edu.html";
-});
 
-const dashboard = document.querySelector(".complete");
-dashboard.addEventListener("click", function(){
-    window.location.href = "candidate-dashboard.html";
+const buttons = document.querySelectorAll('.visibility-btn');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    
+    // remove active class from all buttons
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // add active to clicked button
+    button.classList.add('active');
+  });
 });

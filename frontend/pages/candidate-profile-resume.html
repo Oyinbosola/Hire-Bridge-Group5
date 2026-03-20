@@ -1,88 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Profile Creation</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles/candidate-profile-resume.css">
-<script src="../scripts/candidate-profile-resume.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile-creation-resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/candidate-profile-resume.css"/>
+  <script src="../scripts/api.js"></script>
+  <script src="../scripts/candidate-profile-resume.js" defer></script>
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
+    <h1>Profile Creation</h1>
 
-  <h1>Profile Creation</h1>
+    <!-- Steps -->
+    <div class="steps">
 
-  <!-- Steps -->
-  <div class="steps">
-    <div class="step active sign-in">✔ Sign In</div>
-    <div class="step basic-info">2 Basic Information</div>
-    <div class="step exp">3 Experience</div>
-    <div class="step job-pref green">4 Job Preferences</div>
-  </div>
+<div class="step active">
+<div class="step-icon">✓</div>
+<div class="step-text sign-in">Sign In</div>
+</div>
 
-  <div class="grid">
+<div class="step">
+<div class="step-icon">2</div>
+<div class="step-text basic-info">Basic Information</div>
+</div>
 
-    <!-- LEFT -->
-    <div>
-      <h2>Resume</h2>
+<div class="step current">
+<div class="step-icon">3</div>
+<div class="step-text exp">Experience</div>
+</div>
 
-      <label>Upload resume</label>
-      <input type="text">
+<div class="step">
+<div class="step-icon">4</div>
+<div class="step-text job-pref">Job Preferences</div>
+</div>
 
-      <label>Portfolio link</label>
-      <input type="text">
+</div>
 
-      <label>LinkedIn profile</label>
-      <input type="text">
+    <div class="grid">
+      
+      <!-- LEFT -->
+      <div>
+        <h2>Resume</h2>
 
-      <label>Personal website</label>
-      <input type="text">
+        <label>Upload resume</label>
+        <input type="file"/>
 
-      <h2 class="mt">Profile Visibility</h2>
+        <label>Portfolio link</label>
+        <input type="text"/>
 
-      <div class="visibility">
-        <button class="pill active">Open to work</button>
-        <button class="pill outline">Visible to recruiters</button>
-        <button class="pill outline">Private account</button>
+        <label>LinkedIn profile</label>
+        <input type="text"/>
+
+        <label>Personal website</label>
+        <input type="text"/>
+
+        <h2 class="mt">Profile Visibility</h2>
+
+        <div class="buttons">
+  <button class="visibility-btn active">Open to work</button>
+  <button class="visibility-btn">Visible to recruiters</button>
+  <button class="visibility-btn">Private account</button>
+</div>
+      </div>
+
+      <!-- RIGHT -->
+      <div>
+        <h2>Job Preferences</h2>
+
+        <label>Desired job role</label>
+        <input type="text"/>
+
+        <label>Preferred location</label>
+        <select>
+          <option>Please select</option>
+          <option>Lagos</option>
+          <option >Abuja</option>
+          <option>Porthacourt</option>
+        </select>
+
+        <label>Preferred work type</label>
+        <select>
+          <option>Remote</option>
+          <option>On-site</option>
+          <option>Hybrid</option>
+        </select>
+
+        <label>Employment type</label>
+        <select>
+          <option>Full-time</option>
+          <option>Part-time</option>
+        </select>
+
+        <label>Expected salary range</label>
+        <select>
+          <option>₦70,000 - ₦100,000</option>
+          <option>₦80,000 - ₦150,000</option>
+          <option>₦100,000 - ₦200,000</option>
+          <option>₦200,000 - ₦500,000</option>
+          <option>Above ₦500,000 </option>
+        </select>
+
+        <label>Availability</label>
+        <select>
+          <option>Within 2 weeks</option>
+          <option>Within 4 weeks</option>
+          <option>Within 8 weeks</option>
+        </select>
       </div>
     </div>
 
-    <!-- RIGHT -->
-    <div>
-      <h2>Job Preferences</h2>
-
-      <label>Desired job role</label>
-      <input type="text">
-
-      <label>Preferred location</label>
-      <select><option>Please select</option></select>
-
-      <label>Preferred work type</label>
-      <select><option>Remote</option></select>
-
-      <label>Employment type</label>
-      <select><option>Full-time</option></select>
-
-      <label>Expected salary range</label>
-      <select><option>$70,000 - 100,000</option></select>
-
-      <label>Availability</label>
-      <select><option>Within 2 weeks</option></select>
+    <!-- Footer Buttons -->
+    <div class="footer">
+        <a class="back" href="candidate-profile-edu.html">← Back</a>
+        <a class="primary" href="candidate-dashboard.html">Complete profile</a>
     </div>
-
   </div>
-
-  <!-- Footer -->
-  <div class="footer">
-    <button class="back">‹ Back</button>
-    <button class="complete">Complete profile</button>
-  </div>
-
-</div>
 
 </body>
 </html>

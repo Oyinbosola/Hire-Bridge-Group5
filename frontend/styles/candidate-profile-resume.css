@@ -1,143 +1,201 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
+  
 }
 
-body{
-  font-family:'Montserrat', sans-serif;
-  background:#f5f7fb;
-  color:#1f2937;
+body {
+  margin: 0;
+  background: #f7f7f7;
+  font-family: "Montserrat", sans-serif;
 }
 
-.container{
-  max-width:1100px;
-  margin:40px auto;
-  padding:20px;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
-/* TITLE */
-h1{
-  font-weight:700;
-  margin-bottom:20px;
+h1 {
+  margin-bottom: 20px;
 }
 
-h2{
-  margin-bottom:15px;
-  font-size:20px;
-  font-weight:600;
+h2 {
+  margin: 20px 0 10px;
 }
 
-/* STEPS */
+.mt {
+  margin-top: 30px;
+}
+
+/* STEP CONTAINER */
+
 .steps{
-  display:flex;
-  gap:12px;
-  margin-bottom:30px;
+width:100%;
+display:flex;
+gap:25px;
+margin-bottom:45px;
 }
+
+/* STEP CARD */
 
 .step{
-  background:#f1f5f9;
-  padding:10px 18px;
-  border-radius:10px;
-  font-size:14px;
-  color:#6b7280;
+flex:1;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:16px 20px;
+background:#ffffff;
+
+border-radius:10px;
+border:1px solid #e4e4e4;
+
+/* 3D POP EFFECT */
+
+box-shadow:
+0 6px 12px rgba(0,0,0,0.08),
+0 2px 4px rgba(0,0,0,0.06);
+
+font-size:15px;
+font-weight:600;
+
+transition:all 0.25s ease;
 }
 
-.step.active{
-  background:#e6f0ff;
-  color:#1E5ED6;
-  font-weight:600;
+/* HOVER POP */
+
+.step:hover{
+transform:translateY(-3px);
+
+box-shadow:
+0 12px 20px rgba(0,0,0,0.12),
+0 4px 8px rgba(0,0,0,0.08);
 }
 
-.step.green{
-  background:#e6f8f2;
-  color:#10B981;
-  font-weight:600;
+/* NUMBER / ICON */
+
+.step-icon{
+width:26px;
+height:26px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:#e8eefc;
+color:#2563eb;
+font-size:14px;
+font-weight:700;
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:40px;
+/* ACTIVE STEP */
+
+.step.active .step-icon{
+background:#2563eb;
+color:white;
 }
 
-/* FORM */
-label{
-  display:block;
-  margin:12px 0 6px;
-  font-size:14px;
-  font-weight:500;
+.step.active .step-text{
+color:#2563eb;
 }
 
-input, select{
-  width:100%;
-  padding:10px;
-  border:1px solid #d1d5db;
-  border-radius:8px;
-  font-family:'Montserrat';
+/* CURRENT STEP */
+
+.step.current .step-icon{
+background:#22c55e;
+color:white;
 }
 
-/* VISIBILITY */
-.visibility{
-  display:flex;
-  gap:10px;
-  margin-top:10px;
-  flex-wrap:wrap;
+.step.current .step-text{
+color:#16a34a;
 }
 
-.pill{
-  padding:8px 14px;
-  border-radius:8px;
-  border:none;
-  cursor:pointer;
-  font-size:13px;
+/* Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
-.pill.active{
-  background:#1E5ED6;
-  color:white;
+/* Inputs */
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
-.pill.outline{
-  border:1px solid #1E5ED6;
-  color:#1E5ED6;
-  background:white;
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
 }
 
-/* FOOTER */
-.footer{
-  margin-top:30px;
-  display:flex;
-  justify-content:space-between;
+/* Buttons */
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.back{
-  background:#1E5ED6;
-  color:white;
-  border:none;
-  padding:10px 20px;
-  border-radius:8px;
-  cursor:pointer;
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
 }
 
-.complete{
-  background:#1E5ED6;
-  color:white;
-  border:none;
-  padding:10px 24px;
-  border-radius:8px;
-  cursor:pointer;
+.visibility-btn {
+  border: 1px solid #2563eb;
+  background: white;
+  color: #2563eb;
 }
 
-/* SPACING */
-.mt{
-  margin-top:25px;
+.visibility-btn.active {
+  background: #2563eb;
+  color: white;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  .grid{
-    grid-template-columns:1fr;
+.primary {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  background: #2563eb;
+  color: white;
+}
+
+.outline {
+  border: 1px solid #2563eb;
+  background: white;
+  color: #2563eb;
+}
+
+.back {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  background: #2563eb;
+  color: white;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .steps {
+    flex-direction: column;
   }
 }
