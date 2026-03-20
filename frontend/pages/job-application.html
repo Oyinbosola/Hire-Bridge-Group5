@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hire Bridge - Job Application</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles/job-application.css">
+<script src="../scripts/api.js" defer></script>
+<script src="../scripts/job-application.js" defer></script>
+</head>
+
+<body>
+
+<div class="form-wrapper">
+
+    <!-- Header -->
+    <div class="form-header">
+        <h2 class="logo">Hire <span>Bridge</span></h2>
+        <h1>Job application form</h1>
+    </div>
+
+    <form class="application-form">
+
+        <!-- Name -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="firstName" placeholder="First">
+            </div>
+
+            <div class="form-group">
+                <label class="hidden-label">Last</label>
+                <input type="text" id="lastName" placeholder="Last">
+            </div>
+        </div>
+
+        <!-- Email / Phone -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input type="text" id="phone">
+            </div>
+        </div>
+
+        <!-- Position / Date -->
+        <div class="form-row">
+            <div class="form-group">
+                <label>What position are you applying for?</label>
+                <select id="position">
+                    <option>Please select</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>UI Designer</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Available Start Date</label>
+                <input type="date">
+            </div>
+        </div>
+
+        <!-- Employment -->
+        <div class="employment-section">
+            <label>What is your current employment status?</label>
+
+            <div class="employment-grid">
+
+                <label class="radio-card">
+                    <input type="radio" name="status" value="Employed">
+                    Employed
+                </label>
+
+                <label class="radio-card">
+                    <input type="radio" name="status" value="Self-Employed">
+                    Self-Employed
+                </label>
+
+                <label class="radio-card">
+                    <input type="radio" name="status" value="Unemployed">
+                    Unemployed
+                </label>
+
+                <label class="radio-card">
+                    <input type="radio" name="status" value="Student">
+                    Student
+                </label>
+
+            </div>
+        </div>
+
+        <!-- Resume Upload -->
+        <div class="upload-section">
+            <label>Upload your resume</label>
+
+            <div class="upload-box">
+                Choose files or drag here
+                <input type="file" id="resume">
+            </div>
+        </div>
+
+        <!-- Verification -->
+        <div class="captcha">
+            <input type="checkbox">
+            <span>I'm not a robot</span>
+        </div>
+<button type="submit">Submit Application</button>
+<p id="error-message"></p>
+    </form>
+
+</div>
+
+</body>
+</html>

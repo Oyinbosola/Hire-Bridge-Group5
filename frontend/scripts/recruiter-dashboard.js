@@ -1,5 +1,3 @@
-<<<<<<< candidate-dashboard
-=======
 function loadActiveJobs() {
     const jobOneBtns = document.querySelectorAll(".job-one .job-btn button");
     jobOneBtns[0].textContent = "42 applicants";
@@ -304,4 +302,3 @@ async function loadRecentApplicants() {
     }
 }
 loadRecentApplicants();
->>>>>>> develop

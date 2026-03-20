@@ -130,6 +130,12 @@ button {
   color: white;
 }
 
+/* SAVE BUTTON */
+.save-btn {
+  background: #2f5fd0; /* same as edit */
+  color: white;
+}
+
 /* HOVER EFFECT */
 button:hover {
   opacity: 0.9;

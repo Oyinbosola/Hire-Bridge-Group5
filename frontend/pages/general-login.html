@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Hire Bridge</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="../styles/general-login.css">
+   <script src="../scripts/api.js"></script>
+  <script src="../scripts/general-login.js" defer></script>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SECTION -->
+    <section class="left-section">
+      <!-- Logo -->
+      <img src="../../assets/icons/logo-five.png" alt="Hire Bridge logo" class="logo">
+
+      <!-- Heading -->
+      <h1>Welcome Back to Hire Bridge</h1>
+
+      <!-- Description -->
+      <p>Log in to continue connecting with opportunities and talent on Hire Bridge</p>
+
+      <!-- Illustration -->
+      <img src="../../assets/images/image2.png" alt="People connecting through Hire Bridge platform" class="illustrations">
+
+      <!-- Back Button -->
+      <button class="back-btn" onclick="history.back()">&lt; Back</button>
+    </section>
+
+    <!-- RIGHT SECTION -->
+    <section class="right-section">
+      <!-- Heading -->
+      <h1>Log In To Your Account</h1>
+
+      <!-- Subtext -->
+      <p class="subtext">Welcome back! Select method to login:</p>
+
+      <!-- Social Buttons -->
+      <div class="social-buttons">
+        <button class="google-btn">
+          <img src="../../assets/icons/google.svg" alt="Google login" class="social-icon"> 
+          Google
+        </button>
+        <button class="apple-btn">
+          <img src="../../assets/icons/Vector.svg" alt="Apple login" class="social-icon">
+          Apple ID
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider">
+        <span>Or continue with email</span>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" class="login-form">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <p id="error-message"></p>
+
+        <div class="remember-forgot">
+          <label class="remember">
+            <input type="checkbox" name="remember">
+            <span>Remember me</span>
+          </label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Log in</button>
+      </form>
+
+      <!-- Create Account -->
+      <p class="create-account">
+        Dont have an account? <a href= "welcome.html">Create an Account</a>
+      </p>
+    </section>
+
+  </div>
+  
+
+</body>
+</html>

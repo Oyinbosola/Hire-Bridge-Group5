@@ -2,6 +2,7 @@
 const form = document.querySelector("form");
 
 // Get inputs (based on your placeholders)
+
 const nameInput = form.querySelector('input[placeholder="Name"]');
 const emailInput = form.querySelector('input[placeholder="Email"]');
 const passwordInput = form.querySelectorAll('input[type="password"]')[0];
@@ -17,7 +18,8 @@ form.addEventListener("submit", async function (e) {
     const confirmPassword = confirmPasswordInput.value.trim();
 
     // Simple validation
-    if (!name || !email || !password || !confirmPassword) {
+
+ if (!name || !email || !password || !confirmPassword) {
         alert("Please fill all fields");
         return;
     }
@@ -46,3 +48,4 @@ form.addEventListener("submit", async function (e) {
         console.error(error);
     }
 });
+

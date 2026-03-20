@@ -47,3 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const createAccount = document.querySelector(".btn-primary");
+createAccount.addEventListener("click", function(){
+    window.location.href = "recruiter-dashboard.html";
+});

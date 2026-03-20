@@ -1,77 +1,90 @@
-// Grab DOM elements
-const jobSelect = document.querySelector('.job-select'); // make sure this class matches your <select>
-const submitBtn = document.querySelector('.submit-btn'); // button to trigger action
-const resultsContainer = document.querySelector('.results-container'); // where results will go
+const titleInput = document.querySelector('.form-group:nth-of-type(1) input');
+const descriptionInput = document.querySelector('.form-group:nth-of-type(2) textarea');
+const skillsBox = document.querySelector('.skills-box'); 
+const experienceSelect = document.querySelector('.form-group:nth-of-type(4) select');
+const locationInput = document.querySelector('.form-group:nth-of-type(5) input');
 
-// Function to fetch data for a selected job
-async function fetchJobData(jobId) {
-    try {
-        const token = localStorage.getItem('token'); // if you are using auth
-        if (!jobId) {
-            alert('Please select a job first.');
-            return;
-        }
+const editBtn = document.querySelector('.edit-btn');
+const saveBtn = document.querySelector('.save-btn');
+const deleteBtn = document.querySelector('.delete-btn');
 
-        const response = await fetch(`https://hirebridge-server.onrender.com/api/v1/jobs/${jobId}`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
+// Helper: convert skills box spans into array
+function getSkillsArray() {
+  return Array.from(skillsBox.querySelectorAll('span')).map(span => span.textContent.trim());
+}
 
-        if (!response.ok) throw new Error('Failed to fetch job data.');
+// Generic submit function
+async function submitJob(redirectPage = 'job-posting.html') {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    alert('You are not logged in. Please login first.');
+    window.location.href = 'general-login.html';
+    return;
+  }
 
-        const data = await response.json();
-        displayResults(data);
-    } catch (error) {
-        console.error(error);
-        resultsContainer.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+  const jobData = {
+    title: titleInput.value.trim(),
+    description: descriptionInput.value.trim(),
+    location: locationInput.value.trim(),
+    experienceLevel: experienceSelect.value.toLowerCase(),
+    requiredSkills: getSkillsArray()
+  };
+
+  if (!jobData.title || !jobData.description || !jobData.location) {
+    alert('Please fill in all required fields.');
+    return;
+  }
+
+  try {
+    const jobId = localStorage.getItem('editing_job_id');
+    if (jobId) {
+      // Update existing job
+      await apiCall(`/api/v1/jobs/${jobId}`, 'PATCH', jobData);
+      alert('Job updated successfully!');
+      localStorage.removeItem('editing_job_id');
+    } else {
+      // Create new job
+      await apiCall('/api/v1/jobs', 'POST', jobData);
+      alert('Job posted successfully!');
     }
+
+    window.location.href = redirectPage;
+
+  } catch (error) {
+    console.error('Error submitting job:', error);
+    alert('Error: ' + (error.message || 'Could not submit job'));
+  }
 }
 
-// Function to display results in the DOM
-function displayResults(data) {
-    // Clear previous results
-    resultsContainer.innerHTML = '';
+// Deactivate function
+async function deactivateJob() {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    alert('You are not logged in. Please login first.');
+    window.location.href = 'general-login.html';
+    return;
+  }
 
-    // Example: show job title and description
-    const jobCard = document.createElement('div');
-    jobCard.classList.add('job-card');
-    jobCard.innerHTML = `
-        <h3>${data.title || 'No title'}</h3>
-        <p>${data.description || 'No description available'}</p>
-    `;
-    resultsContainer.appendChild(jobCard);
+  const jobId = localStorage.getItem('editing_job_id');
+  if (!jobId) {
+    alert('No job selected to deactivate.');
+    return;
+  }
+
+  const confirmed = confirm('Are you sure you want to deactivate this job?');
+  if (!confirmed) return;
+
+  try {
+    await apiCall(`/api/v1/jobs/${jobId}/deactivate`, 'PATCH');
+    alert('Job has been deactivated.');
+    window.location.href = 'my-jobs.html';
+  } catch (error) {
+    console.error('Error deactivating job:', error);
+    alert('Could not deactivate job: ' + (error.message || 'Unknown error'));
+  }
 }
 
-// Event listener for submit button
-submitBtn.addEventListener('click', () => {
-    const selectedJobId = jobSelect.value;
-    fetchJobData(selectedJobId);
-});
-
-// Optional: load jobs into the select on page load
-async function loadJobs() {
-    try {
-        const token = localStorage.getItem('token');
-        const response = await fetch('https://hirebridge-server.onrender.com/api/v1/jobs', {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-        if (!response.ok) throw new Error('Failed to fetch jobs list.');
-        const jobs = await response.json();
-
-        // Populate the select dropdown
-        jobs.forEach(job => {
-            const option = document.createElement('option');
-            option.value = job.id;
-            option.textContent = job.title;
-            jobSelect.appendChild(option);
-        });
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-// Load jobs when page loads
-window.addEventListener('DOMContentLoaded', loadJobs);
+// Event listeners
+editBtn.addEventListener('click', () => submitJob('job-posting.html'));
+saveBtn.addEventListener('click', () => submitJob('recruiter-dashboard.html'));
+deleteBtn.addEventListener('click', deactivateJob);

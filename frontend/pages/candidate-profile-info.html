@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/candidate-profile-info.css" />
+  <script src="../scripts/candidate-profile-info.js" defer></script>
 </head>
 <body>
   <div class="page-wrapper">
@@ -16,19 +17,19 @@
     <div class="stepper">
       <div class="step active">
         <div class="step-circle checked">✓</div>
-        <span class="step-text">Sign In</span>
+        <span class="step-text sign-in">Sign In</span>
       </div>
       <div class="step active">
         <div class="step-circle">2</div>
-        <span class="step-text">Basic Information</span>
+        <span class="step-text basic-info">Basic Information</span>
       </div>
       <div class="step">
         <div class="step-circle">3</div>
-        <span class="step-text">Experience</span>
+        <span class="step-text exp">Experience</span>
       </div>
       <div class="step">
         <div class="step-circle">4</div>
-        <span class="step-text">Job Preferences</span>
+        <span class="step-text job-pref">Job Preferences</span>
       </div>
     </div>
 
@@ -124,45 +125,5 @@
     </div>
   </div>
 
-  <script>
-    // highlight focused input row
-    document.querySelectorAll('.form-group input, .form-group textarea')
-      .forEach(function (el) {
-        el.addEventListener('focus', function () {
-          this.parentElement.classList.add('focused');
-        });
-        el.addEventListener('blur', function () {
-          this.parentElement.classList.remove('focused');
-        });
-      });
-
-    // simple simulated step advance
-    const steps = document.querySelectorAll('.step');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentStepIndex = 1; // Basic Information
-
-    nextBtn.addEventListener('click', function () {
-      if (currentStepIndex < steps.length - 1) {
-        steps[currentStepIndex].classList.remove('active');
-        currentStepIndex += 1;
-        steps[currentStepIndex].classList.add('active');
-      }
-    });
-
-    // profile photo preview
-    const photoInput = document.getElementById('photoInput');
-    const photoPreview = document.getElementById('photoPreview');
-
-    photoInput.addEventListener('change', function () {
-      const file = this.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        photoPreview.style.backgroundImage = 'url(' + e.target.result + ')';
-        photoPreview.classList.add('has-image');
-      };
-      reader.readAsDataURL(file);
-    });
-  </script>
 </body>
 </html>

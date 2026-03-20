@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/job-status.css">
+    <script src="../scripts/job-status.js" defer></script>
 </head>
 <body>
     <div class="gridbox">
@@ -83,7 +84,7 @@
             <div class="middle-header">
               <div class="my-applied">
                 <div class="My-appl">
-                  <h3>My Applications > <span class="applied">Applied</span></h3>
+                  <h3 id="pageTitle">My Applications ><span class="applied">Applied</span></h3>
                </div>
           <!-- this filters and allows for easy searching-->
                    <div class="fltr-btns">
@@ -136,7 +137,7 @@
                     <div class="right-details">
                         <p class="appl-status">Your Application Status</p>
                         <div class="appl-stats">
-                            <p class="appl-sent">Application sent</p>
+                            <p class="appl-sent status">Application sent</p>
                             <p class="appl-stat">Waiting</p>
                         </div>
                     </div>
@@ -146,7 +147,7 @@
                 <div class="box brand">     
                   <div class="left-details">
                     
-                        <img class="flutterwave-logo" src="../../assets/icons/flutterwave.svg" alt="">
+                        <img class="flutterwave-logo" src="../../assets/icons/Flutterwave.svg" alt="">
                     
                    
                     <div class="details">
@@ -173,7 +174,7 @@
                     <div class="right-details">
                        <p class="appl-status">Your Application Status</p>
                         <div class="appl-stats">
-                            <p class="appl-pend">Application pending</p>
+                            <p class="appl-pend status">Application pending</p>
                             <p class="appl-stat">Waiting</p>
                         </div>
                     </div>
@@ -209,8 +210,8 @@
                     <div class="right-details">
                         <p class="appl-status">Your Application Status</p>
                         <div class="appl-stats">
-                            <p class="appl-rej">Application rejected</p>
-                            <p class="appl-stat">Search for other jobs</p>
+                            <p class="appl-rej status">Application rejected</p>
+                            <p class="appl-stat rejected">Search for other jobs</p>
                         </div>
                     </div>
                 </div>
@@ -246,7 +247,7 @@
                     <div class="right-details">
                         <p class="appl-status">Your Application Status</p>
                         <div class="appl-stats">
-                            <p class="appl-acc">Application accepted</p>
+                            <p class="appl-acc status">Application accepted</p>
                             <p class="appl-stat">Send in a message</p>
                         </div>
                     </div>
@@ -283,7 +284,7 @@
                     <div class="right-details">
                         <p class="appl-status">Your Application Status</p>
                         <div class="appl-stats">
-                            <p class="appl-sent">Application sent</p>
+                            <p class="appl-sent status">Application sent</p>
                             <p class="appl-stat">Waiting</p>
                         </div>
                     </div>
@@ -293,7 +294,7 @@
                 <div class="box brand">
                   <div class="left-details">
                     
-                        <img class="anthropic-logo" src="../../assets/icons/anthropic.svg" alt="">
+                        <img class="anthropic-logo" src="../../assets/icons/Anthropic.svg" alt="">
                     
                    
                     <div class="details">
@@ -320,7 +321,7 @@
                     <div class="right-details">
                       <p class="appl-status">Your Application Status</p>
                         <div class="appl-stats">
-                            <p class="appl-sent">Application sent</p>
+                            <p class="appl-sent status">Application sent</p>
                             <p class="appl-stat">Waiting</p>
                         </div>
                     </div>

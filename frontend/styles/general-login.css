@@ -1,0 +1,268 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f4f6fb;
+  color:#222;
+}
+
+/* MAIN LAYOUT */
+.container{
+  display:flex;
+  min-height:100vh;
+  width:100%;
+}
+
+/* LEFT SECTION */
+.left-section{
+  flex:1;
+  background:linear-gradient(135deg,#1e5ed6,#3c7af0);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:70px 60px;
+  gap:24px;
+}
+
+.logo{
+  width:140px;
+}
+
+.left-section h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:36px;
+  max-width:420px;
+}
+
+.left-section p{
+  font-size:16px;
+  max-width:420px;
+}
+
+.illustrations{
+  width:100%;
+  max-width:340px;
+  height:auto;
+}
+
+.back-btn{
+  padding:10px 22px;
+  border:none;
+  border-radius:6px;
+  background:white;
+  color:#1e5ed6;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+
+.back-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* RIGHT SECTION */
+.right-section{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:70px 60px;
+  background:white;
+  text-align:center;
+  gap:20px;
+}
+
+.right-section h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:44px;
+  max-width:420px;
+}
+
+.subtext{
+  font-size:15px;
+  color:#666;
+}
+.social-buttons{
+  display:flex;
+  gap:12px;
+  margin-bottom:20px;
+  justify-content: center;
+}
+ .social-buttons button{
+  width: 186px;
+  height: 50px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap: 5px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  cursor:pointer;
+  background:white;
+}
+.social-icon{
+  width:19px;
+  height:18px;
+} 
+/* DIVIDER */
+.divider{
+  display:flex;
+  align-items:center;
+  width:100%;
+  max-width:420px;
+  margin:10px 0;
+}
+
+.divider::before,
+.divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:#ddd;
+}
+
+.divider span{
+  margin:0 12px;
+  font-size:12px;
+  color:#777;
+  white-space:nowrap;
+}
+
+/* FORM */
+.login-form{
+  width:100%;
+  max-width:420px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.login-form input{
+  width:100%;
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+.login-form input:focus{
+  border-color:#1e5ed6;
+  outline:none;
+}
+
+/* REMEMBER / FORGOT */
+.remember-forgot{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:13px;
+}
+
+.remember{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+/* LOGIN BUTTON */
+.login-btn{
+  width:100%;
+  padding:13px;
+  background:#1e5ed6;
+  color:white;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+
+.login-btn:hover{
+  background:#1645b0;
+  transform:translateY(-2px);
+}
+
+/* CREATE ACCOUNT */
+.create-account{
+  margin-top:10px;
+  font-size:13px;
+}
+
+.create-account a{
+  color:#1e5ed6;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Large laptops */
+@media (max-width:1440px){
+  .left-section,
+  .right-section{
+    padding:60px;
+  }
+  .right-section h1{
+    font-size:40px;
+  }
+}
+
+/* Laptops */
+@media (max-width:1200px){
+  .left-section h1{
+    font-size:32px;
+  }
+  .right-section h1{
+    font-size:36px;
+  }
+}
+
+/* Tablets */
+@media (max-width:1024px){
+  .container{
+    flex-direction:column;
+  }
+  .left-section,
+  .right-section{
+    width:100%;
+    padding:50px 30px;
+  }
+  .illustrations{
+    max-width:280px;
+  }
+}
+
+/* Small tablets / 780px */
+@media (max-width:780px){
+  .left-section h1,
+  .right-section h1{
+    font-size:28px;
+  }
+  .social-buttons{
+    flex-direction:column;
+  }
+  .social-buttons button{
+    width:100%;
+  }
+}
+
+/* Phones */
+@media (max-width:500px){
+  .left-section,
+  .right-section{
+    padding:40px 20px;
+  }
+  .left-section h1{
+    font-size:24px;
+  }
+  .right-section h1{
+    font-size:22px;
+  }
+}

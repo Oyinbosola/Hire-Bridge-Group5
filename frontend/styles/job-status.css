@@ -15,7 +15,7 @@ body{
 .gridbox{
     display: grid;
     height: 100vh;
-    grid-template-columns: 36rem 1fr;
+    grid-template-columns: 35.1rem 108.9rem;
     grid-template-rows: 1fr;
     
 }

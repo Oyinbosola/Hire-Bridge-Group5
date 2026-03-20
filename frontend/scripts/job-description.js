@@ -9,6 +9,8 @@ const popularBtn = document.querySelector(".popular");
 const popularThreshold = 200;
 const clearFilters = document.querySelector(".clr-fltr")
 
+// For the search button
+
 search.addEventListener("keydown", function(e){
 if(e.key === "Enter"){
 e.preventDefault()
@@ -21,6 +23,7 @@ search.value = ""
 };
 });
 
+ // For creating the new filter buttons after they are searched
 function createFilter(keyword){
 const newButton = document.createElement("button")
 newButton.textContent = keyword
@@ -34,6 +37,7 @@ filterJobs(keyword)
 filterJobs(keyword)
 };
 
+// For the premade filter buttons
 
 filters.forEach(function(button){
 button.addEventListener("click", function(){
@@ -52,6 +56,7 @@ job.style.display = "none"
 });
 
 
+
 function filterJobs(keyword){
 const jobs = document.querySelectorAll(".job-card");
 jobs.forEach(function(job){
@@ -65,15 +70,19 @@ job.style.display = "none"
 });
 };
 
+// For the clear filters section 
+
 clearFilters.addEventListener("click", function(){
     filtersBox.style.display = "none"
-    jobCards.forEach(job => {
+    jobContainer.forEach(job => {
 
 job.style.display = "block"
 
 })
 
 });
+
+// For the sort button 
 
 const sortBtn = document.querySelector(".sort")
 const sortOptions = document.getElementById("sortOptions");
@@ -102,6 +111,7 @@ sortOptions.addEventListener("click", (e) => {
   sortOptions.classList.add("hidden");
 });
 
+// For the jobs for you and popular filtering
 
 jobsForYouBtn.addEventListener("click", function(){
 jobsForYouBtn.classList.add("active");
