@@ -1,125 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Profile Creation</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="../styles/candidate-profile-edu.css"/>
-<script src="../scripts/candidate-profile-edu.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>candidate profile experience</title>
+    <link rel="stylesheet" href="../styles/candidate-profile-edu.css">
+    <script src="../scripts/api.js"></script>
+    <script src="../scripts/candidate-profile-edu.js" defer></script>
 </head>
-
 <body>
+   <div class="container">
 
-<div class="container">
+<h1>Profile Creation</h1>
 
-  <h1>Profile Creation</h1>
+<div class="steps">
 
-  <!-- Steps -->
-  <div class="steps">
-    <div class="step active sign-in">✓ Sign In</div>
-    <div class="step basic-info">2 Basic Information</div>
-    <div class="step green exp">3 Experience</div>
-    <div class="step job-pref">4 Job Preferences</div>
-  </div>
+<div class="step active">
+<div class="step-icon">✓</div>
+<div class="step-text sign-in">Sign In</div>
+</div>
 
-  <div class="grid">
+<div class="step">
+<div class="step-icon">2</div>
+<div class="step-text basic-info">Basic Information</div>
+</div>
 
-    <!-- LEFT COLUMN -->
-    <div>
-      <h2>Experience & Skills</h2>
+<div class="step current">
+<div class="step-icon">3</div>
+<div class="step-text exp">Experience</div>
+</div>
 
-      <label>Title</label>
-      <input type="text">
-
-      <label>Employment type</label>
-      <select><option>Please select</option></select>
-
-      <label>Company or organization</label>
-      <input type="text">
-
-      <label class="checkbox">
-        <input type="checkbox" checked> I am currently working in this role
-      </label>
-
-      <div class="row">
-        <div>
-          <label>Start date</label>
-          <input type="date">
-        </div>
-
-        <div>
-          <label>End date</label>
-          <input type="date">
-        </div>
-      </div>
-
-      <label>Location</label>
-      <input type="text">
-
-      <label>Location type</label>
-      <select><option>Please select</option></select>
-
-      <button class="add">+ Add Experience</button>
-
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div>
-
-      <h2>Education</h2>
-
-      <label>School</label>
-      <input type="text">
-
-      <label>Degree</label>
-      <select><option>Please select</option></select>
-
-      <label>Field of study</label>
-      <input type="text">
-
-      <label>Grade</label>
-      <input type="text">
-
-      <div class="row">
-        <div>
-          <label>Start date</label>
-          <input type="date">
-        </div>
-
-        <div>
-          <label>End date</label>
-          <input type="date">
-        </div>
-      </div>
-
-      <button class="add">+ Add Experience</button>
-
-      <h2>Skills</h2>
-
-      <div class="skills">
-        <span>Python ×</span>
-        <span>Figma ×</span>
-        <span>HTML ×</span>
-        <span>UI Design ×</span>
-      </div>
-
-      <input class="skill-input" placeholder="+ Add a new skill">
-
-    </div>
-
-  </div>
-
-  <!-- Footer Buttons -->
-  <div class="footer">
-    <button class="back">‹ Back</button>
-    <button class="next">Next ›</button>
-  </div>
+<div class="step">
+<div class="step-icon">4</div>
+<div class="step-text job-pref">Job Preferences</div>
+</div>
 
 </div>
+
+
+<div class="form-grid">
+
+
+<div class="column">
+
+<h2>Experience & Skills</h2>
+
+<label>Title</label>
+<input type="text">
+
+<label>Employment type</label>
+<select>
+    <option value="">Select Employment Type</option>
+    <option value="hybrid">Hybrid</option>
+    <option value="on-site">On-site</option>
+    <option>Remote</option>
+</select>
+
+<label>Company or organization</label>
+<input type="text">
+
+<div class="checkbox">
+<input type="checkbox">
+<span>I am currently working in this role</span>
+</div>
+
+<div class="date-row">
+<div>
+<label>Start date</label>
+<input type="date">
+</div>
+
+<div>
+<label>End date</label>
+<input type="date">
+</div>
+</div>
+
+<label>Location</label>
+<input type="text">
+
+<label>Location type</label>
+<select>
+<option value="">Select Location</option>
+    <option value="lagos">Lagos</option>
+    <option value="abuja">Abuja</option>
+    <option value="ibadan">Ibadan</option>
+    <option value="porthacourt">Porthacourt</option>
+</select>
+
+<button class="add-btn">+ Add Experience</button>
+
+</div>
+
+
+<div class="column">
+
+<h2>Education</h2>
+
+<label>School</label>
+<input type="text">
+
+<label>Degree</label>
+<select>
+    <option value="">Select Degree</option>
+    <option value="doctorate">Doctorate Degree</option>
+    <option value="masters">Masters Degree</option>
+    <option value="bachelor">Bachelor's Degree</option>
+</select>
+
+<label>Field of study</label>
+<input type="text">
+
+<label>Grade</label>
+<input type="text">
+
+<div class="date-row">
+<div>
+<label>Start date</label>
+<input type="date">
+</div>
+
+<div>
+<label>End date</label>
+<input type="date">
+</div>
+</div>
+
+<button class="add-btn">+ Add Experience</button>
+
+<h2 class="skills-title">Skills</h2>
+
+<div class="skills">
+<span>Python ×</span>
+<span>Figma ×</span>
+<span>HTML ×</span>
+<span>UI Design ×</span>
+</div>
+
+<input class="skill-input" placeholder="+ Add a new skill">
+
+</div>
+
+</div>
+
+<div class="buttons">
+ <a class="back" href="candidate-profile-info.html">← Back</a>
+ <a class="next" href="candidate-profile-resume.html">Next →</a>
+</div>
+
+</div> 
+
 
 </body>
 </html>

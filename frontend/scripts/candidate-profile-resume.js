@@ -17,6 +17,10 @@ const experience = document.querySelector(".exp");
 experience.addEventListener("click", function(){
     window.location.href = "candidate-profile-edu.html";
 });
+const backBtn = document.querySelector(".back")
+backBtn.addEventListener("click", function(){
+    window.location.href = "candidate-profile-edu.html";
+});
 
 const dashboard = document.querySelector(".complete");
 dashboard.addEventListener("click", function(){
