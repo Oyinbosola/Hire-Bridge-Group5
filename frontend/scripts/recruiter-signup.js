@@ -99,7 +99,7 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
         localStorage.setItem("hirebridge_role", "recruiter");
 
         // Redirect to recruiter dashboard
-        window.location.href = "../pages/recruiter-dashboard.html";
+        window.location.href = "recruiter-dashboard.html";
 
     } catch (error) {
         console.error("Signup error:", error.message || error);
