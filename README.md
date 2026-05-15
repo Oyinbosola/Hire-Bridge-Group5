@@ -45,5 +45,5 @@ This project was developed by my team and I for the capstone.
 - Group Repository:
   https://oyinbosola.github.io/Hire-Bridge-Group5/
 
-  ---
+
 
